@@ -1,8 +1,10 @@
 import React, {useState } from 'react';
 import './css/Login.css';
-import logo from './images/Logo.png';
+import img1 from './images/syncal.png';
+import img2 from './images/syncalwhite.png';
 
-console.log(logo);
+
+
 
 
 const setDark = () => {
@@ -12,6 +14,7 @@ const setDark = () => {
   
     // 3
     document.documentElement.setAttribute("data-theme", "dark");
+
   };
   
   const setLight = () => {
@@ -21,15 +24,22 @@ const setDark = () => {
   
   
   
-
   
   const toggleTheme = (e) => {
     if (e.target.checked) {
       setDark();
+      setImageSrc(img2);
     } else {
       setLight();
+      setImageSrc(img1);
     }
   };
+
+
+
+
+
+
 
 
 function Login (){
@@ -42,6 +52,13 @@ function Login (){
             function handleLoginClick() {
               setActivePanel('login');
             }
+
+
+            const [imageSrc, setImageSrc] = useState(img1);
+
+            function handleImagechange() {
+                setImageSrc(img2);
+              }
             
 
         return (
@@ -56,7 +73,7 @@ function Login (){
                 </div>
                 
                 <div id="SyncalImage">
-                    <img class="syncal" src={logo}></img>
+                    <img src={imageSrc}  ></img>
                 </div>
 
 

@@ -359,6 +359,7 @@ input {
   --div-color: #fff;
   --form-color: #fff;
   --img-color: #eee;
+  --syncal-img:../images/syncal.png
 
 }
 
@@ -370,6 +371,7 @@ input {
   --div-color:rgba(88,86,106);
   --form-color: rgb(44, 44, 49);
   --img-color:rgba(52,53,65);
+  --syncal-img:../images/syncalwhite.png
 
 }
 
@@ -399,9 +401,15 @@ h{
   background-color: var(--form-color);
 }
 
-#syncal{
-  background-color: var(--img-color);
+#SyncalImage {
+  width: 500px;
+  background: var(--syncal-img) center / cover;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
 }
+
+
 
 
 .toggle-theme-wrapper {
@@ -466,6 +474,8 @@ input:checked + .slider {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
 
 
 
