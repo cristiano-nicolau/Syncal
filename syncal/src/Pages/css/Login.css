@@ -16,7 +16,14 @@ body {
   height: 100vh;
 }
 
-
+.syncal{
+  border-radius:10%;
+}
+@media(max-width: 1300px) {
+  #SyncalImage{
+    display:none !important;
+  }
+}
 
 h1 {
   font-weight: 700;
