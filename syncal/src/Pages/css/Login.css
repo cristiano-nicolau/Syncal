@@ -16,6 +16,42 @@ body {
   height: 100vh;
 }
 
+#Enterpage {
+  height: 100vh;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.download-button {
+  font-size: 22px;
+  font-family: Poppins;
+  background-color: white;
+  border-radius: 3px;
+  padding: 0.6rem 1rem;
+  color: rgb(122, 122, 122);
+  border: solid 1px #ccc;
+}
+
+.download-button:hover {
+  background-color: gray;
+  cursor: pointer;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+@media all and (max-width: 960px) { 
+  .download-button {
+      width: 13rem;
+      padding: 0.5rem 1rem;
+      font-size: 18px;
+  }
+}
+
+
 .syncal{
   border-radius:10%;
 }
@@ -94,8 +130,8 @@ a:hover {
 button {
   position: relative;
   border-radius: 20px;
-  border: 1px solid #4bb6b7;
-  background-color: #4bb6b7;
+  border: 1px solid var(--button-color);
+  background-color: var(--button-color);
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -114,9 +150,14 @@ button:active {
   transform: scale(0.95);
 }
 
+#underl{
+  color: var(--tags-color);
+}
+
 #underl:hover{
   color: #4bb6b7;
   cursor: pointer;
+
 }
 button:focus {
   outline: none;
@@ -359,7 +400,10 @@ input {
   --div-color: #fff;
   --form-color: #fff;
   --img-color: #eee;
-  --syncal-img:../images/syncal.png
+  --syncal-img:../images/syncal.png;
+  --button-color: #4bb6b7;
+  --logregcont-color:white;
+  --tags-color:black;
 
 }
 
@@ -367,11 +411,14 @@ input {
 
   --background-color:rgba(52,53,65);
   --font-color: #eee;
-  --link-color: blue;
+  --link-color: rgb(44, 44, 49);
   --div-color:rgba(88,86,106);
   --form-color: rgb(44, 44, 49);
   --img-color:rgba(52,53,65);
-  --syncal-img:../images/syncalwhite.png
+  --button-color: rgb(44, 44, 49);
+  --syncal-img:../images/syncalwhite.png;
+  --logregcont-color:grey;
+  --tags-color:rgb(44, 44, 49);
 
 }
 
@@ -395,11 +442,9 @@ h{
 
 .container{
   background-color: var(--div-color);
+  margin-top: 150px;
 }
 
-.form-container register-container{
-  background-color: var(--form-color);
-}
 
 #SyncalImage {
   width: 500px;
@@ -407,6 +452,18 @@ h{
   height: 600px;
   object-fit: cover;
   object-position: center;
+  margin-left: 50px;
+  align-items: center;
+  margin-bottom: 40px ;
+}
+
+
+#img {
+  align-items: center;
+}
+
+#logregcont{
+  background-color: var(--logregcont-color);
 }
 
 
@@ -420,6 +477,13 @@ h{
 
 .toggle-theme-text{
   float:left;
+  position: flex;
+}
+
+
+#logtitle{
+  color: black;
+
 }
 
 .toggle-theme-wrapper span {
