@@ -16,38 +16,72 @@ body {
   height: 100vh;
 }
 
-#Enterpage {
-  height: 100vh;
-  background-color: #f1f1f1;
+#s1{
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 
-.download-button {
-  font-size: 22px;
-  font-family: Poppins;
-  background-color: white;
-  border-radius: 3px;
-  padding: 0.6rem 1rem;
-  color: rgb(122, 122, 122);
-  border: solid 1px #ccc;
+#s2{
+  margin-bottom: 100px;
 }
 
-.download-button:hover {
-  background-color: gray;
+
+
+
+
+.scroll-down {
+  height:60px;
+  width: 30px;
+  align-content:center;
+  left: 50%;
+  border:2px;
+  border-radius: 10px;
   cursor: pointer;
-  color: white;
-  transition: all 0.4s ease-in-out;
 }
 
-@media all and (max-width: 960px) { 
-  .download-button {
-      width: 13rem;
-      padding: 0.5rem 1rem;
-      font-size: 18px;
+  .scroll-down::before,
+  .scroll-down::after {
+      content: "";
+      position:absolute;
+      align-content:center;
+      left: 50%;
+      height: 20px;
+      width: 20px;
+      transform: translate(-50%, -100%) rotate(45deg);
+      border: 2px solid black;
+      border-top: transparent;
+      border-left: transparent;
+      animation: scroll-down 1s ease-in-out infinite;
+  }
+
+  .scroll-down::before {
+      top: 30%;
+      animation-delay: 0.3s;
+      /* animation: scroll-down 1s ease-in-out infinite; */
+  }
+
+@keyframes scroll-down {
+  0% {
+      /* top:20%; */
+      opacity: 0;
+  }
+
+  30% {
+      opacity: 1;
+  }
+
+  60% {
+      opacity: 1;
+  }
+
+  100% {
+      top: 90%;
+      opacity: 0;
   }
 }
 
