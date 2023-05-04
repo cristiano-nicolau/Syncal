@@ -2,6 +2,36 @@ import React, {useState } from 'react';
 import './css/Login.css';
 import logo from './images/Logo.png';
 
+console.log(logo);
+
+
+const setDark = () => {
+
+    // 2
+    localStorage.setItem("theme", "dark");
+  
+    // 3
+    document.documentElement.setAttribute("data-theme", "dark");
+  };
+  
+  const setLight = () => {
+    localStorage.setItem("theme", "light");
+    document.documentElement.setAttribute("data-theme", "light");
+  };
+  
+  
+  
+
+  
+  const toggleTheme = (e) => {
+    if (e.target.checked) {
+      setDark();
+    } else {
+      setLight();
+    }
+  };
+
+
 function Login (){
             const [activePanel, setActivePanel] = useState('login');
           
@@ -16,9 +46,20 @@ function Login (){
 
         return (
             <div>
+                <div className="toggle-theme-wrapper">
+                        <p className="toggle-theme-text">Dark Mode</p>
+                        <label className="toggle-theme" htmlFor='checkbox'>
+                            <input type="checkbox" id="checkbox" onChange={toggleTheme}></input>
+                            <div className="slider round"> </div>
+                        </label>
+                        
+                </div>
+                
                 <div id="SyncalImage">
                     <img class="syncal" src={logo}></img>
                 </div>
+
+
                 <div className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
                     <div class="form-container register-container"> 
                         <form action="#">
