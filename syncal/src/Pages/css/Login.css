@@ -12,7 +12,6 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -504,12 +503,17 @@ h{
 
 
 .toggle-theme-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   position: fixed;
   top: 10px;
   right: 20px ;
 }
 
 .toggle-theme-text{
+  margin: 0;
   float:left;
   position: flex;
 }
