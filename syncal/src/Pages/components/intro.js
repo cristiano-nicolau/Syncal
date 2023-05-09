@@ -8,6 +8,7 @@ const Intro = () => {
 
     function handleImagechange() {
         setImageSrc(img2);
+        
       }
 
     return (
@@ -17,7 +18,7 @@ const Intro = () => {
                       <img src={imageSrc} id="img" ></img>
                   </div>
                   <div className="Title">
-                      <h1>Syncal</h1>
+                      <h1 id="introtitle">Syncal</h1>
                   </div>
               </div>
             </section>

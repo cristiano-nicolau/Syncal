@@ -76,10 +76,10 @@ const LoginLayout = () => {
                           <div class="form-container register-container" id="logregcont"> 
                               <form action="#">
                                   <h1 id="logtitle">Register here</h1>
-                                  <input type="text" placeholder="Name"></input>
-                                  <input type="email" placeholder="Email"></input>
-                                  <input type="password" placeholder="Password"></input>
-                                  <button>Register</button>
+                                  <input id="loginput" type="text" placeholder="Name"></input>
+                                  <input id="loginput" type="email" placeholder="Email"></input>
+                                  <input id="loginput" type="password" placeholder="Password"></input>
+                                  <button id="loginbutton">Register</button>
                                   <span id="underl"onClick={handleLoginClick}>Already have an account?</span>
                                   <div class="social-container">
                                       <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -89,20 +89,20 @@ const LoginLayout = () => {
                               </form>
                           </div>
                           <div class="form-container login-container" id="logregcont">
-                          <form action="#">
+                          <form  action="#">
                               <h1 id="logtitle">Login here</h1>
-                              <input type="email" placeholder="Email"></input>
-                              <input type="password" placeholder="Password"></input>
+                              <input id="loginput"type="email" placeholder="Email"></input>
+                              <input id="loginput" type="password" placeholder="Password"></input>
                               <div class="content">
                                   <div class="checkbox">
                                       <input type="checkbox" name="checkbox" id="checkbox"></input>
                                       <label for="Remember me"></label>
                                   </div>
                                   <div class="pass-link">
-                                      <a href="#">Forgot your password?</a>
+                                      <a id="loginforget" href="#">Forgot your password?</a>
                                   </div>
                               </div>
-                              <button>Login</button>
+                              <button id="loginbutton">Login</button>
                               <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                               <div class="social-container">
                                       <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -117,16 +117,16 @@ const LoginLayout = () => {
                               <div class="overlay">
                                   <div class="overlay-panel overlay-left">
                                       <h1 class="title">Welcome to Syncal</h1>
-                                      <p>Lets build our world together</p>
-                                      <button class="ghost" id="login"  onClick={handleLoginClick}>Login
+                                      <p id="plogin">Lets build our world together</p>
+                                      <button class="ghost" id="loginbutton"  onClick={handleLoginClick}>Login
                                           <i class="lni-lni-arrow-left-right"></i>
                                       </button>
 
                                   </div>
                                   <div class="overlay-panel overlay-right">
                                       <h1 class="title">Hello from Syncal</h1>
-                                      <p>If you don't have an account yet,join us by register and start your journey</p>
-                                      <button class="ghost" id="register" onClick={handleRegisterClick}>Register
+                                      <p id="plogin">If you don't have an account yet,join us by register and start your journey</p>
+                                      <button class="ghost" id="loginbutton" onClick={handleRegisterClick}>Register
                                           <i class="lni-lni-arrow-right-left"></i>
                                       </button>
 

@@ -94,21 +94,27 @@ body {
   }
 }
 
-h1 {
+#introtitle{
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
   margin-bottom: 15px;
 }
 
+
+
 h1.title {
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
+  margin-bottom: 15px;
   font-size: 45px;
   line-height: 45px;
   margin: 0;
   text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
 }
 
-p {
+#plogin {
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -116,13 +122,7 @@ p {
   margin: 20px 0 30px;
   text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
 }
-
-span {
-  font-size: 14px;
-  margin-top: 25px;
-}
-
-a {
+#loginforget{
   color: #333;
   font-size: 14px;
   text-decoration: none;
@@ -130,9 +130,10 @@ a {
   transition: 0.3s ease-in-out;
 }
 
-a:hover {
+#loginforget:hover{
   color: #4bb6b7;
 }
+
 
 .content {
   display: flex;
@@ -160,7 +161,7 @@ a:hover {
   padding-left: 5px;
 }
 
-button {
+#loginbutton{
   position: relative;
   border-radius: 20px;
   border: 1px solid var(--button-color);
@@ -173,17 +174,22 @@ button {
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
+
 }
 
-button:hover {
+
+
+#loginbutton:hover {
   letter-spacing: 3px;
 }
 
-button:active {
+#loginbutton:active {
   transform: scale(0.95);
 }
 
 #underl{
+  font-size: 14px;
+  margin-top: 25px;
   color: var(--tags-color);
 }
 
@@ -192,36 +198,36 @@ button:active {
   cursor: pointer;
 
 }
-button:focus {
+#loginbutton:focus {
   outline: none;
 }
 
-button.ghost {
+#loginbutton.ghost {
   background-color: rgba(225, 225, 225, 0.2);
   border: 2px solid #fff;
   color: #fff;
 }
 
-button.ghost i{
+#loginbutton.ghost i{
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-button.ghost i.register{
+#loginbutton.ghost i{
   right: 70px;
 }
 
-button.ghost i.login{
+#loginbutton.ghost i{
   left: 70px;
 }
 
-button.ghost:hover i.register{
+#loginbutton.ghost:hover i{
   right: 40px;
   opacity: 1;
 }
 
-button.ghost:hover i.login{
+#loginbutton.ghost:hover i{
   left: 40px;
   opacity: 1;
 }
@@ -237,7 +243,7 @@ form {
   text-align: center;
 }
 
-input {
+#loginput {
   background-color: #eee;
   border-radius: 10px;
   border: none;
@@ -516,10 +522,19 @@ h{
   margin: 0;
   float:left;
   position: flex;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
 }
 
 
 #logtitle{
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
+  margin-bottom: 15px;
   color: black;
 
 }
@@ -533,6 +548,7 @@ h{
   display: inline-block;
   height: 34px;
   width: 60px;
+  
 }
 
 .toggle-theme input {
