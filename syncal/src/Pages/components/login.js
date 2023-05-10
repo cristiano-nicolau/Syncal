@@ -74,7 +74,7 @@ const LoginLayout = () => {
 
                       <div className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
                           <div class="form-container register-container" id="logregcont"> 
-                              <form action="#">
+                              <form id="loginform" action="#">
                                   <h1 id="logtitle">Register here</h1>
                                   <input id="loginput" type="text" placeholder="Name"></input>
                                   <input id="loginput" type="email" placeholder="Email"></input>

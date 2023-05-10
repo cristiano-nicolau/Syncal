@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-* {
-  box-sizing: border-box;
-}
 
 #bodylogin {
   display: flex;
@@ -235,7 +230,7 @@ h1.title {
   opacity: 1;
 }
 
-form {
+#loginform {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -252,7 +247,8 @@ form {
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
-  width: 100%;
+  width: 60%;
+  position: center ;
 }
 
 .container {
