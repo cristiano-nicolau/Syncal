@@ -66,11 +66,6 @@ const LoginLayout = () => {
                   </div>
 
                   <div class="logindiv">
-                  
-                      <div id="SyncalImage">
-                          <img src={imageSrc} id="img" ></img>
-                      </div>
-
 
                       <div className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
                           <div class="form-container register-container" id="logregcont"> 
@@ -89,7 +84,7 @@ const LoginLayout = () => {
                               </form>
                           </div>
                           <div class="form-container login-container" id="logregcont">
-                          <form  action="#">
+                          <form id="loginform" action="#">
                               <h1 id="logtitle">Login here</h1>
                               <input id="loginput"type="email" placeholder="Email"></input>
                               <input id="loginput" type="password" placeholder="Password"></input>
