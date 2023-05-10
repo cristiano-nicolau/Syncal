@@ -24,7 +24,7 @@ function Homebox() {
                         <Dropdown.Item href="#/action-3">Event</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-secondary">Groups</button>
                 <button type="button" class="btn btn-outline-secondary">Secondary</button>
                 <button type="button" class="btn btn-outline-secondary">Secondary</button>
             </div>

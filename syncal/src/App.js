@@ -7,6 +7,7 @@ import Login from './Pages/Login.js';
 import NewCalendar from './Pages/Newcalendar.js';
 import NewGroup from './Pages/Newgroup.js';
 import NewEvent from './Pages/NewEvent.js';
+import Groups from './Pages/Groups';
 const App = () => {
    return (
 
@@ -21,6 +22,8 @@ const App = () => {
             <Route path="/newgroup" element={<NewGroup />} />
             <Route path="/newevent" element={<NewEvent />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/groups" element={<Groups />} />
+
 
          </Routes>
       </>
