@@ -55,6 +55,9 @@ const LoginLayout = () => {
 
     return (
         <div>
+             <div id="loginfooter">
+                        
+                        </div>
             <section id="s2">
               <animated.div style={props}>
                   <div className="toggle-theme-wrapper">
@@ -131,6 +134,10 @@ const LoginLayout = () => {
                               </div>
                           </div>
                       </div>
+                      <div id="loginfooter">
+
+                      </div>
+
                   </div> 
             </animated.div>
           </section>

@@ -12,10 +12,10 @@ import LoginLayout from './components/login';
 
 function Login (){
         return (
-          <>
+          <div id="alldivslogin">
           <Intro />
           <LoginLayout />
-        </>
+        </div>
         )
     }
 export default Login;
