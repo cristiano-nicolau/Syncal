@@ -10,7 +10,7 @@ function Homebox() {
     return (
         <div id='homebox'>
             <h1>
-                Welcome Joaquim,
+                Welcome $USER,
             </h1>
 
             <div id='HomeButtons' class="container space-around" >
@@ -19,14 +19,17 @@ function Homebox() {
                         New
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Calendar</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Group</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Event</Dropdown.Item>
+                        <Dropdown.Item href="/newcalendar">Calendar</Dropdown.Item>
+                        <Dropdown.Item href="/newgroup">Group</Dropdown.Item>
+                        <Dropdown.Item href="/newevent">Event</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-secondary">My schedules</button>
+                <button type="button" class="btn btn-outline-secondary">Sharing Options</button>
+                
+                <a href="/groups">
+                    <button type="button" href='/groups' class="btn btn-outline-secondary">Groups</button>
+                </a>
             </div>
             <h2>
                 Today events ({day})

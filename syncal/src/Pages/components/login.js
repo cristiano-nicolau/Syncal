@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import img1 from '../images/syncal.png';
 import img2 from '../images/syncalwhite.png';
 
-const LoginLayout = () => {
+const LoginLayout = (props) => {
     const [activePanel, setActivePanel] = useState('login');
           
             function handleRegisterClick() {
@@ -15,42 +15,10 @@ const LoginLayout = () => {
             }
 
 
-            const [imageSrc, setImageSrc] = useState(img1);
-
-            function handleImagechange() {
-                setImageSrc(img2);
-              }
-
-              const setDark = () => {
-
-                // 2
-                localStorage.setItem("theme", "dark");
-              
-                // 3
-                document.documentElement.setAttribute("data-theme", "dark");
-            
-              };
-              
-              const setLight = () => {
-                localStorage.setItem("theme", "light");
-                document.documentElement.setAttribute("data-theme", "light");
-              };
-              
-              
-              
-              
-              const toggleTheme = (e) => {
-                if (e.target.checked) {
-                  setDark();
-                  setImageSrc(img2);
-                } else {
-                  setLight();
-                  setImageSrc(img1);
-                }
-              };
+    
 
 
-              const props = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1500 } });
+              const ani = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1500 } });
 
 
     return (
@@ -59,18 +27,18 @@ const LoginLayout = () => {
                         
                         </div>
             <section id="s2">
-              <animated.div style={props}>
+              <animated.div style={ani}>
                   <div className="toggle-theme-wrapper">
                           <p className="toggle-theme-text">Dark Mode</p>
                           <label className="toggle-theme" htmlFor='checkbox'>
-                              <input type="checkbox" id="checkbox" onChange={toggleTheme}></input>
+                              <input type="checkbox" id="checkbox" onChange={props.onClick}></input>
                               <div className="slider round"> </div>
                           </label> 
                   </div>
 
                   <div class="logindiv">
 
-                      <div className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
+                      <div  id="logincontainer" className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
                           <div class="form-container register-container" id="logregcont"> 
                               <form id="loginform" action="#">
                                   <h1 id="logtitle">Register here</h1>

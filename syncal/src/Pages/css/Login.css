@@ -13,7 +13,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   background-color: var(--background-color);
 }
 
@@ -45,11 +44,15 @@
   }
 }
 
+
+
 #introtitle {
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
   margin-bottom: 15px;
+  font-size:200px;
+  color:var(--font-color);
 }
 
 
@@ -206,7 +209,7 @@ h1.title {
   position: center ;
 }
 
-.container {
+#logincontainer {
   background-color: #fff;
   border-radius: 25px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -215,7 +218,7 @@ h1.title {
   max-width: 100%;
   min-height: 500px;
   height: 600px;
-  width: 500px;
+  width: 1200px;
 }
 
 #SyncalImage {
@@ -308,6 +311,7 @@ h1.title {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
+  background-color: var(--div-color);
   color: #fff;
   position: relative;
   left: -100%;
@@ -484,7 +488,7 @@ h {
   font-weight: 100;
   line-height: 20px;
   letter-spacing: 0.5px;
-  text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+  color:var(--plogin-color);
 }
 
 

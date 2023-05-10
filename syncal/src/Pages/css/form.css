@@ -1,0 +1,44 @@
+.formtype {
+    display: block;
+    position: fixed;
+    /* or absolute */
+    top: 15%;
+    left: 7%;
+}
+
+#form {
+    border-color: black;
+    position: fixed;
+    /* or absolute */
+    top: 22%;
+    left: 10%;
+
+    border-radius: 5%;
+    padding: 3%;
+    background-color: #3c4247 !important;
+    color: white !important;
+    width: 50% !important;
+}
+
+button.btn.btn-outline-secondary.backbut {
+    position: fixed;
+    /* or absolute */
+    top: 7%;
+    left: 3%;
+}
+
+div#inlineform {
+    display: flex;
+}
+
+button#memberbut {
+    margin-top: 5.7% !important;
+    margin-left: 3% !important;
+    height: 10% !important;
+}
+
+textarea#taid {
+    min-width: 40vw !important;
+    min-height: 20vw !important;
+    border-radius: 3% !important;
+}

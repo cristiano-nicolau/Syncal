@@ -1,0 +1,92 @@
+ #g1 {
+   background-color: #3c4247;
+   margin: 3%;
+   padding: 2%;
+   height: 750px;
+   border-color: black;
+   border-radius: 10px;
+
+ }
+
+ #g2 {
+   background-color: #3c4247;
+   color: white;
+   margin: 3%;
+   padding: 2%;
+   display: flex;
+   justify-content: center;
+   border-color: black;
+   border-radius: 10px;
+   height: 750px;
+ }
+
+ #g3 {
+   background-color: white;
+   margin: 1px;
+   margin-top: 5%;
+   padding: 1%;
+   border-radius: 5px;
+
+ }
+
+ #textocentro {
+   display: flex;
+   justify-content: center;
+
+ }
+
+ #mensagem {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color: #3c4247;
+   width: 100%;
+   height: 100px;
+   text-align: center;
+
+ }
+
+ #formulariogrupos {
+   position: relative;
+   left: 5%;
+   width: 100%;
+   height: 100%;
+   bottom: -42%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+ }
+
+ #chat {
+   position: absolute;
+   width: 100%;
+   bottom: 15%;
+   text-align: left;
+   justify-content: left;
+   vertical-align: middle;
+ }
+
+ #imggroups {
+   float: left;
+   width: 10%;
+   height: 10%;
+   border-radius: 40%;
+   padding: 9px;
+   vertical-align: middle;
+   display: inline-block;
+
+ }
+
+ div#mensagem.chat-messages {
+   border-radius: 7%;
+ }
+
+ #chatbut {
+   margin-left: 2vh !important;
+   margin-bottom: 1.3vh !important;
+ }
+
+ #chatform {
+   margin-left: 3vw;
+ }
