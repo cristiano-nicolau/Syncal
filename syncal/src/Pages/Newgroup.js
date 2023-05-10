@@ -1,27 +1,46 @@
 import React from 'react';
 import Navegationbar from './components/navbar';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import './css/form.css';
 function NewGroup() {
     return (
         <div>
             <Navegationbar></Navegationbar>
-            <div>
-                <button type="button" class="btn btn-outline-secondary">Go back {'<'}-</button>
-                <>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Disabled input</Form.Label>
-                        <Form.Control placeholder="Disabled input" />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Disabled select menu</Form.Label>
-                        <Form.Select disabled>
-                            <option>Disabled select</option>
-                        </Form.Select>
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Check type="checkbox" label="Can't check this" disabled />
-                    </Form.Group>
-                </>
+            <a href="/">
+                <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
+            </a>
+            <div class='formtype'>
+                <h2>Create a new Group</h2>
+                <div id='form'>
+                    <Form id='grouform'>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Group name</Form.Label>
+                            <Form.Control type="text" placeholder="" />
+                        </Form.Group>
+                        <div id='inlineform'>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Add members</Form.Label>
+                                <Form.Control type="password" placeholder="" />
+                            </Form.Group>
+                            <Button variant="primary" id='memberbut' type="submit">
+                                Add member
+                            </Button>
+                        </div>
+                        <Form.Group className="mb-3" controlId="textarea">
+                            <Form.Label>Add group profile information</Form.Label>
+                            <textarea form="testformid" name="taname" id="taid" cols="35" wrap="soft" placeholder=''></textarea>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <Form.Check type="checkbox" label="Make this a public group" />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+
+                    </Form>
+                </div>
+
             </div>
         </div>
     );

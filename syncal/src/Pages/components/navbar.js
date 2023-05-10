@@ -14,7 +14,7 @@ function Navegationbar() {
     }, [])
     return (
         <Navbar bg="dark" expand="lg">
-            <Navbar.Brand href="#">Syncal</Navbar.Brand>
+            <Navbar.Brand href="/">Syncal</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
