@@ -34,7 +34,8 @@ function Newcalendar() {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Make this a public group" />
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+
+                        <Button variant="primary" type="submit" >
                             Submit
                         </Button>
 
