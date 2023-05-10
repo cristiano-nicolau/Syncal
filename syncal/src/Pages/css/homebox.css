@@ -1,0 +1,59 @@
+.container.space-around {
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+#homebox {
+    margin: 3%;
+    padding: 2%;
+    width: 75vw !important;
+
+}
+
+#schedbut {
+    margin: 3%;
+}
+
+/*navbar css*/
+
+.navbar-brand {
+    color: white !important;
+    padding-right: 10vw;
+
+}
+
+a.nav-link {
+    color: white !important;
+
+}
+
+.d-flex {
+    width: fit-content;
+}
+
+button.btn.btn-outline-success {
+    margin-left: 1vw !important;
+    background-color: rgb(30, 30, 36) !important;
+    color: white !important;
+    border-color: black;
+
+}
+
+.form-control {
+    width: 17vw !important;
+}
+
+div.me-2.form-control {
+    min-width: 5vw !important;
+
+}
+
+div.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
+    margin-right: 20vw !important;
+    min-width: fit-content;
+}
+
+div.nav-item.dropdown {
+    margin-left: 14vw !important;
+}

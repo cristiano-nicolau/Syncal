@@ -15,7 +15,7 @@
   height: 100vh;
 }
 
-#s1{
+#s1 {
   height: 100%;
   width: 100%;
   display: flex;
@@ -25,7 +25,7 @@
 }
 
 
-#s2{
+#s2 {
   margin-bottom: 100px;
 }
 
@@ -34,67 +34,68 @@
 
 
 .scroll-down {
-  height:60px;
+  height: 60px;
   width: 30px;
-  align-content:center;
+  align-content: center;
   left: 50%;
-  border:2px;
+  border: 2px;
   border-radius: 10px;
   cursor: pointer;
 }
 
-  .scroll-down::before,
-  .scroll-down::after {
-      content: "";
-      position:absolute;
-      align-content:center;
-      left: 50%;
-      height: 20px;
-      width: 20px;
-      transform: translate(-50%, -100%) rotate(45deg);
-      border: 2px solid black;
-      border-top: transparent;
-      border-left: transparent;
-      animation: scroll-down 1s ease-in-out infinite;
-  }
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  align-content: center;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
 
-  .scroll-down::before {
-      top: 30%;
-      animation-delay: 0.3s;
-      /* animation: scroll-down 1s ease-in-out infinite; */
-  }
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
 
 @keyframes scroll-down {
   0% {
-      /* top:20%; */
-      opacity: 0;
+    /* top:20%; */
+    opacity: 0;
   }
 
   30% {
-      opacity: 1;
+    opacity: 1;
   }
 
   60% {
-      opacity: 1;
+    opacity: 1;
   }
 
   100% {
-      top: 90%;
-      opacity: 0;
+    top: 90%;
+    opacity: 0;
   }
 }
 
 
-.syncal{
-  border-radius:10%;
+.syncal {
+  border-radius: 10%;
 }
+
 @media(max-width: 1300px) {
-  #SyncalImage{
-    display:none !important;
+  #SyncalImage {
+    display: none !important;
   }
 }
 
-#introtitle{
+#introtitle {
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
@@ -122,7 +123,8 @@ h1.title {
   margin: 20px 0 30px;
   text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
 }
-#loginforget{
+
+#loginforget {
   color: #333;
   font-size: 14px;
   text-decoration: none;
@@ -130,7 +132,7 @@ h1.title {
   transition: 0.3s ease-in-out;
 }
 
-#loginforget:hover{
+#loginforget:hover {
   color: #4bb6b7;
 }
 
@@ -161,7 +163,7 @@ h1.title {
   padding-left: 5px;
 }
 
-#loginbutton{
+#loginbutton {
   position: relative;
   border-radius: 20px;
   border: 1px solid var(--button-color);
@@ -187,17 +189,18 @@ h1.title {
   transform: scale(0.95);
 }
 
-#underl{
+#underl {
   font-size: 14px;
   margin-top: 25px;
   color: var(--tags-color);
 }
 
-#underl:hover{
+#underl:hover {
   color: #4bb6b7;
   cursor: pointer;
 
 }
+
 #loginbutton:focus {
   outline: none;
 }
@@ -208,26 +211,26 @@ h1.title {
   color: #fff;
 }
 
-#loginbutton.ghost i{
+#loginbutton.ghost i {
   position: absolute;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-#loginbutton.ghost i{
+#loginbutton.ghost i {
   right: 70px;
 }
 
-#loginbutton.ghost i{
+#loginbutton.ghost i {
   left: 70px;
 }
 
-#loginbutton.ghost:hover i{
+#loginbutton.ghost:hover i {
   right: 40px;
   opacity: 1;
 }
 
-#loginbutton.ghost:hover i{
+#loginbutton.ghost:hover i {
   left: 40px;
   opacity: 1;
 }
@@ -264,7 +267,7 @@ form {
 }
 
 #SyncalImage {
-  float:left;
+  float: left;
   width: 500px;
   max-width: 100%;
   min-height: 500px;
@@ -275,11 +278,11 @@ form {
 }
 
 
-.syncal{
+.syncal {
   margin: auto;
   display: block;
-  width:300px;
-  height:300px;
+  width: 300px;
+  height: 300px;
   background: transparent;
 
 }
@@ -319,6 +322,7 @@ form {
 }
 
 @keyframes show {
+
   0%,
   49.99% {
     opacity: 0;
@@ -368,11 +372,9 @@ form {
   right: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(46, 94, 109, 0.4) 40%,
-    rgba(46, 94, 109, 0)
-  );
+  background: linear-gradient(to top,
+      rgba(46, 94, 109, 0.4) 40%,
+      rgba(46, 94, 109, 0));
 }
 
 .container.right-panel-active .overlay {
@@ -439,47 +441,47 @@ form {
   --div-color: #fff;
   --form-color: #fff;
   --img-color: #eee;
-  --syncal-img:../images/syncal.png;
+  --syncal-img: ../images/syncal.png;
   --button-color: #4bb6b7;
-  --logregcont-color:white;
-  --tags-color:black;
+  --logregcont-color: white;
+  --tags-color: black;
 
 }
 
-[data-theme="dark"]{
+[data-theme="dark"] {
 
-  --background-color:rgba(52,53,65);
+  --background-color: rgba(52, 53, 65);
   --font-color: #eee;
   --link-color: rgb(44, 44, 49);
-  --div-color:rgba(88,86,106);
+  --div-color: rgba(88, 86, 106);
   --form-color: rgb(44, 44, 49);
-  --img-color:rgba(52,53,65);
+  --img-color: rgba(52, 53, 65);
   --button-color: rgb(44, 44, 49);
-  --syncal-img:../images/syncalwhite.png;
-  --logregcont-color:grey;
-  --tags-color:rgb(44, 44, 49);
+  --syncal-img: ../images/syncalwhite.png;
+  --logregcont-color: grey;
+  --tags-color: rgb(44, 44, 49);
 
 }
 
 
-body{
+body {
   background-color: var(--background-color);
   color: var(--font-color);
 }
 
-a{
+a {
   color: var(--link-color);
 }
 
-span{
+span {
   text-decoration-color: var(--link-color);
 }
 
-h{
+h {
   text-decoration-color: var(--font-color);
 }
 
-.container{
+.container {
   background-color: var(--div-color);
   margin-top: 150px;
 }
@@ -493,7 +495,7 @@ h{
   object-position: center;
   margin-left: 50px;
   align-items: center;
-  margin-bottom: 40px ;
+  margin-bottom: 40px;
 }
 
 
@@ -501,7 +503,7 @@ h{
   align-items: center;
 }
 
-#logregcont{
+#logregcont {
   background-color: var(--logregcont-color);
 }
 
@@ -515,12 +517,12 @@ h{
   gap: 1rem;
   position: fixed;
   top: 10px;
-  right: 20px ;
+  right: 20px;
 }
 
-.toggle-theme-text{
+.toggle-theme-text {
   margin: 0;
-  float:left;
+  float: left;
   position: flex;
   font-size: 14px;
   font-weight: 100;
@@ -530,7 +532,7 @@ h{
 }
 
 
-#logtitle{
+#logtitle {
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
@@ -548,7 +550,7 @@ h{
   display: inline-block;
   height: 34px;
   width: 60px;
-  
+
 }
 
 .toggle-theme input {
@@ -577,11 +579,11 @@ h{
   width: 26px;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: cornflowerblue;
 }
 
@@ -592,10 +594,3 @@ input:checked + .slider {
 .slider.round:before {
   border-radius: 50%;
 }
-
-
-
-
-
-
-
