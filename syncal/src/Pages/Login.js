@@ -15,6 +15,11 @@ import LoginLayout from './components/login';
 function Login (){
 
   const [imageSrc, setImageSrc] = useState(img1);
+  const [active, setActive] = useState(false);
+
+  const handleLoginActive = () => {
+    setActive(true);
+  }
 
 function handleImagechange() {
     setImageSrc(img2);
@@ -50,9 +55,10 @@ function handleImagechange() {
 
         return (
           <div id="alldivslogin">
-          <Intro image={imageSrc} />
-          <LoginLayout onClick={toggleTheme} />
+          <Intro image={imageSrc} onClick={handleLoginActive} />
+          <LoginLayout onClick={toggleTheme} show={active} />
         </div>
         )
     }
 export default Login;
+

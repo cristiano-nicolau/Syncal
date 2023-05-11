@@ -7,14 +7,18 @@ const Intro = (props) => {
 
 
     return (
-        <section id="s1">
-                  <div className="intrologo">
-                      <img src={props.image} id="img" ></img>
-                  </div>
-                  <div className="introttitle">
-                      <h1 id="introtitle">Syncal</h1>
-                  </div>
+        <>
+            <section id="s1" style={{ height: '90vh' }}>
+                <div className="intrologo">
+                    <img src={props.image} id="img" ></img>
+                </div>
+                <div className="introttitle">
+                    <h1 id="introtitle">Syncal</h1>
+                </div>
+
             </section>
+            <a href="#s2" id="scrolldownbuttonintro" onClick={props.onClick}>Get started</a>
+        </>
     )
 
 }

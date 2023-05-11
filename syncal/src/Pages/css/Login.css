@@ -17,6 +17,8 @@
 }
 
 
+
+
 #s2 {
   background-color: var(--background-color);
 }
@@ -24,7 +26,7 @@
 
 #loginfooter {
   background-color: var(--background-color);
-  height: 100px;
+  height: 10;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -50,11 +52,17 @@
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
-  margin-bottom: 15px;
   font-size:200px;
   color:var(--font-color);
 }
 
+#scrolldownbuttonintro{
+  width: 100% ;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  height: 10vh;
+}
 
 
 h1.title {
@@ -216,8 +224,7 @@ h1.title {
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  min-height: 500px;
-  height: 600px;
+  height: 40rem;
   width: 1200px;
 }
 
@@ -441,10 +448,6 @@ h {
   text-decoration-color: var(--font-color);
 }
 
-.container {
-  background-color: var(--div-color);
-  margin-top: 150px;
-}
 
 
 #SyncalImage {
