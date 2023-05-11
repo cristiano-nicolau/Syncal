@@ -1,5 +1,6 @@
 import React from 'react';
 import Schedule from './schedule';
+import Schedule2 from './schedule2';
 import Dropdown from 'react-bootstrap/Dropdown';
 function Homebox() {
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -26,9 +27,9 @@ function Homebox() {
                 </Dropdown>
                 <button type="button" class="btn btn-outline-secondary">My schedules</button>
                 <button type="button" class="btn btn-outline-secondary">Sharing Options</button>
-                
+
                 <a href="/groups">
-                    <button type="button" href='/groups' class="btn btn-outline-secondary">Groups</button>
+                    <button type="button" href='/groups' class="btn btn-outline-secondary">Group chat</button>
                 </a>
             </div>
             <h2>
@@ -38,7 +39,7 @@ function Homebox() {
             <h2>
                 This month events ({month})
             </h2>
-            <Schedule></Schedule>
+            <Schedule2></Schedule2>
         </div>
     );
 }

@@ -35,13 +35,13 @@ function Navegationbar() {
                     <Button variant="outline-success">Search</Button>
                 </Form>
                 <NavDropdown title="Joaquim Andrade" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
-                        Another action
+                        Settings
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                        Something else here
+                    <NavDropdown.Item href="/login">
+                        Logout
                     </NavDropdown.Item>
                 </NavDropdown>
             </Navbar.Collapse>

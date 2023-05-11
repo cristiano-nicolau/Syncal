@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/Login.css';
 import img1 from './images/syncal.png';
 import img2 from './images/syncalwhite.png';
@@ -12,7 +12,7 @@ import LoginLayout from './components/login';
 
 
 
-function Login (){
+function Login() {
 
   const [imageSrc, setImageSrc] = useState(img1);
   const [active, setActive] = useState(false);
@@ -21,7 +21,7 @@ function Login (){
     setActive(true);
   }
 
-function handleImagechange() {
+  function handleImagechange() {
     setImageSrc(img2);
   }
 
@@ -29,20 +29,20 @@ function handleImagechange() {
 
     // 2
     localStorage.setItem("theme", "dark");
-  
+
     // 3
     document.documentElement.setAttribute("data-theme", "dark");
 
   };
-  
+
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
   };
-  
-  
-  
-  
+
+
+
+
   const toggleTheme = (e) => {
     if (e.target.checked) {
       setDark();
@@ -53,12 +53,12 @@ function handleImagechange() {
     }
   };
 
-        return (
-          <div id="alldivslogin">
-          <Intro image={imageSrc} onClick={handleLoginActive} />
-          <LoginLayout onClick={toggleTheme} show={active} />
-        </div>
-        )
-    }
+  return (
+    <div id="alldivslogin">
+      <Intro image={imageSrc} onClick={handleLoginActive} />
+      <LoginLayout onClick={toggleTheme} show={active} />
+    </div>
+  )
+}
 export default Login;
 
