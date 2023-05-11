@@ -65,10 +65,11 @@
    text-align: left;
    justify-content: left;
    vertical-align: middle;
+   color: black;
  }
 
  #imggroups {
-   float: left;
+  float: left;
    width: 10%;
    height: 10%;
    border-radius: 40%;

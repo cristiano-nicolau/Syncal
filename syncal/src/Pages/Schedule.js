@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import Navegationbar from './components/navbar';
-import Chat from './components/chat';
-import Calendar from "./components/calendar";
+import calendariotafoda from "./components/calendar";
 
-function Groups() {
+function Schedule() {
     return (
         <div>
             <Navegationbar></Navegationbar>
             <div>
-                <Chat></Chat>
+                <calendariotafoda></calendariotafoda>
             </div>
-
         </div>
     );
 }
 
-export default Groups;
+export default Schedule;

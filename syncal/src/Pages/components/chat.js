@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap';
 import img from '../images/imguser.jpg';
+import Calendar from './calendar';
 import '../css/groups.css'
 
 function Chat() {
@@ -41,58 +42,61 @@ function Chat() {
     setNewMessage('');
   };
 
+
+
   return (
-    <div>
-      <Container fluid >
-        <Row>
-          <Col md={3} id="g1">
-            <ListGroup >
-              {groups.map((group) => (
-                <ListGroup.Item action variant='flush' className="my-3"
-                  key={group.id}
-                  active={group === selectedGroup}
-                  onClick={() => handleGroupClick(group) > group.name}
-                >
-                  {group.name}
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Col>
-          <Col md={6} id='g2'>
-            {selectedGroup ? (
+    //ir para a pagina calendar.js quando clicar no button
+        <><div>
+        <Button variant="primary" onClick={2}>calendar</Button>
+        </div>
+        <Container fluid>
+          <Row>
+              <Col md={3} id="g1">
+                  <ListGroup>
+                      {groups.map((group) => (
+                          <ListGroup.Item action variant='flush' className="my-3"
+                              key={group.id}
+                              active={group === selectedGroup}
+                              onClick={() => handleGroupClick(group) > group.name}
+                          >
+                              {group.name}
+                          </ListGroup.Item>
+                      ))}
+                  </ListGroup>
+              </Col>
+              <Col md={6} id='g2'>
+                  {selectedGroup ? (
 
-              <Container fluid id='g3'>
-                <h1 id='textocentro' >{selectedGroup.name}</h1>
-                <div id='chat'>
-                  <img src={img} id="imggroups" ></img>
-                  <h3>Cristiano Nicolau</h3>
-                  <h5>Olá, tudo bem?</h5>
-                </div>
-                <div className="chat-messages" id='mensagem' >
-                </div>
-                <form id='formulariogrupos' onSubmit={handleNewMessageSubmit}><p>Envie uma mensagem:</p>
-                  <div className="form-group" id='chatform'>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="newMessage"
-                      value={newMessage}
-                      onChange={handleNewMessageChange}
-                    />
-                  </div>
-                  <button type="submit" id='chatbut' className="btn btn-primary">
-                    Enviar
-                  </button>
-                </form>
+                      <Container fluid id='g3'>
+                          <h1 id='textocentro'>{selectedGroup.name}</h1>
+                          <div id='chat'>
+                              <img src={img} id="imggroups"></img>
+                              <h3>Cristiano Nicolau</h3>
+                              <h5>Olá, tudo bem?</h5>
+                          </div>
+                          <div className="chat-messages" id='mensagem'>
+                          </div>
+                          <form id='formulariogrupos' onSubmit={handleNewMessageSubmit}><p>Envie uma mensagem:</p>
+                              <div className="form-group" id='chatform'>
+                                  <input
+                                      type="text"
+                                      className="form-control"
+                                      id="newMessage"
+                                      value={newMessage}
+                                      onChange={handleNewMessageChange} />
+                              </div>
+                              <button type="submit" id='chatbut' className="btn btn-primary">
+                                  Enviar
+                              </button>
+                          </form>
 
-              </Container>
-            ) : (
-              <div>Selecione um grupo</div>
-            )}
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                      </Container>
+                  ) : (
+                      <div>Selecione um grupo</div>
+                  )}
+              </Col>
+          </Row>
+      </Container></>
   );
 }
 export default Chat;
