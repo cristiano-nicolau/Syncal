@@ -56,7 +56,7 @@ function Chat() {
   return (
     //ir para a pagina calendar.js quando clicar no button
     <><div>
-      <Button variant="primary" onClick={2}>calendar</Button>
+      <Button variant="primary" href='calendar'>calendar</Button>
     </div>
       <Container fluid>
         <Row>

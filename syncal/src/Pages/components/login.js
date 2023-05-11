@@ -35,7 +35,7 @@ const LoginLayout = (props) => {
 
                 {props.show &&
                     <>
-                        <div style={{ height: '9vh' }}>
+                        <div style={{ height: '17vh' }}>
 
                         </div>
                         <div id="logincontainer" className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
@@ -104,7 +104,7 @@ const LoginLayout = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ height: '9vh' }}>
+                        <div style={{ height: '12vh' }}>
 
                         </div>
                     </>
