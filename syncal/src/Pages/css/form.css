@@ -39,6 +39,6 @@ button#memberbut {
 
 textarea#taid {
     min-width: 40vw !important;
-    min-height: 20vw !important;
+    min-height: 10vw !important;
     border-radius: 3% !important;
 }
