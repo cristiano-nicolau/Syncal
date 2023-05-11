@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import img1 from '../images/syncal.png';
 import img2 from '../images/syncalwhite.png';
+import { Link } from 'react-router-dom';
 
 const LoginLayout = (props) => {
     const [activePanel, setActivePanel] = useState('login');
@@ -67,7 +68,9 @@ const LoginLayout = (props) => {
                                             <a id="loginforget" href="#">Forgot your password?</a>
                                         </div>
                                     </div>
-                                    <button id="loginbutton">Login</button>
+                                    <a href="">
+                                        <button id="loginbutton" href="/" >Login</button>
+                                    </a>
                                     <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
