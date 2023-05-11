@@ -26,6 +26,7 @@ function Homebox() {
                 </Dropdown>
                 <button type="button" class="btn btn-outline-secondary">My schedules</button>
                 <button type="button" class="btn btn-outline-secondary">Sharing Options</button>
+                
                 <a href="/groups">
                     <button type="button" href='/groups' class="btn btn-outline-secondary">Groups</button>
                 </a>
