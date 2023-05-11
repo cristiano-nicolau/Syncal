@@ -1,0 +1,96 @@
+1- 
+
+Facil de fazer register, devia ir direto para o login ao inves de voltar ao topo da pagina
+ADD schedule nao é tao perceptivel quanto parece
+
+comentarios:
+
+Eventos- Melhorar design
+
+
+
+2-
+muda o mod apos fazer register
+eventos: devia funcionar o calendario
+levar as informaçoes de login para a Home; Hello user e user
+Mes/dia/ano mudarpara dia/mes/ano
+
+
+3-
+
+nome
+campos de inputs no calendario
+homebox events
+calendar back 
+quando cria evento atraves de new devia entrar diretamente no calendario e vice versa
+
+
+4-
+botoes new maiores , chill
+
+5-
+
+cor register muito clara no light mode
+Mes/dia/ano mudarpara dia/mes/ano
+formato pm am na data
+events info: ter um i a dizer que é info
+calendar info: ter um botao para voltar para o calendario
+carrega no dia  e criar 
+
+
+6- login 
+
+mudar cor 
+altura do container
+aumentar letra
+verificações de login e register
+forget password
+
+
+cobrir ideia motivacao
+
+personas
+cenarios ilustrativos
+requesitos
+metodologia
+
+
+
+
+prototipo
+avaliacao
+
+
+
+
+
+resultados da avaliacao impacto 
+
+
+prototipo funcional 
+metodologia
+
+resultados
+analisde de critica 
+conclusao
+
+
+
+nao ir com medo de tantos errors nas avaliacoes
+reportar erros e bugs encontrados 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
