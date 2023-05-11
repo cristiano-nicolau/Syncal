@@ -200,8 +200,8 @@ function Calendar() {
                 { 
                   id: nanoid(),
                   title: "Conferencia", 
-                  start: "2023-05-09T10:00:00",
-                  end: "2023-05-09T18:30:00" 
+                  start: "2023-06-01T10:00:00",
+                  end: "2023-06-01T18:30:00" 
                 },
                 {    
                   id: nanoid(),
