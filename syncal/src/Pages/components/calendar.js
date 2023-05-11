@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-//import "./styles.css";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -193,18 +192,29 @@ function Calendar() {
               initialEvents={[
                 {
                   id: nanoid(),
-                  title: "All-day event",
-                  start: todayStr
-                  // date: "2020-07-29"
-                },
-                {
-                  id: nanoid(),
                   title: "Futebol com os amigos",
-                  start: todayStr + "T18:00:00",
-                  end: todayStr + "T20:30:00"
+                  start: "2023-05-10T18:00:00",
+                  end: "2023-05-10T20:30:00"
                   // date: "2020-07-30"
-                }
+                },
+                { 
+                  id: nanoid(),
+                  title: "Conferencia", 
+                  start: "2023-05-09T10:00:00",
+                  end: "2023-05-09T18:30:00" 
+                },
+                {    
+                  id: nanoid(),
+                  title: "Viagem para o Rio de Janeiro",
+                  start: "2023-05-06",
+                  end: "2023-05-09"
+                },
               ]} 
+              select={handleDateSelect}
+              eventClick={handleEventClick}
+
+              eventDrop={handleEventDrop}
+              eventResize={handleEventResize}
               dateClick={handleDateClick}
               eventAdd={(e) => {
                 console.log("eventAdd", e);

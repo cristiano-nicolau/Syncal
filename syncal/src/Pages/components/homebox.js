@@ -25,7 +25,9 @@ function Homebox() {
                         <Dropdown.Item href="/newevent">Event</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <button type="button" class="btn btn-outline-secondary">My schedules</button>
+                <a href="/calendar">
+                <button  href="/calendar" type="button" class="btn btn-outline-secondary">My schedules</button>
+                </a>
                 <button type="button" class="btn btn-outline-secondary">Sharing Options</button>
 
                 <a href="/groups">
