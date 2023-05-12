@@ -8,7 +8,7 @@ const Intro = (props) => {
 
     return (
         <>
-            <section id="s1" style={{ height: '90vh' }}>
+            <section id="s1" style={{ height: '100vh' }}>
                 <div className="intrologo">
                     <img src={props.image} id="img" ></img>
                 </div>
