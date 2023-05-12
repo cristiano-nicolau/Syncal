@@ -8,11 +8,9 @@ import LoginLayout from './components/login';
 
 
 
-
-
-
-
 function Login() {
+
+
 
   const [imageSrc, setImageSrc] = useState(img1);
   const [active, setActive] = useState(false);
@@ -43,6 +41,8 @@ function Login() {
 
 
 
+
+
   const toggleTheme = (e) => {
     if (e.target.checked) {
       setDark();
@@ -52,6 +52,7 @@ function Login() {
       setImageSrc(img1);
     }
   };
+
 
   return (
     <div id="alldivslogin">

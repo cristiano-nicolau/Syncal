@@ -12,12 +12,13 @@ const Intro = (props) => {
                 <div className="intrologo">
                     <img src={props.image} id="img" ></img>
                 </div>
-                <div className="introttitle">
+                <div id="introttitle">
                     <h1 id="introtitle">Syncal</h1>
+                    <h2 id="introsubtitle">A calendar tool for everyone</h2>
+                    <a href="#s2" id="scrolldownbuttonintro" onClick={props.onClick}>Get started</a>
                 </div>
 
             </section>
-            <a href="#s2" id="scrolldownbuttonintro" onClick={props.onClick}>Get started</a>
         </>
     )
 

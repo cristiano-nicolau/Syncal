@@ -35,7 +35,7 @@ const LoginLayout = (props) => {
 
                 {props.show &&
                     <>
-                        <div style={{ height: '17vh' }}>
+                        <div style={{ height: '12vh' }}>
 
                         </div>
                         <div id="logincontainer" className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
@@ -45,7 +45,9 @@ const LoginLayout = (props) => {
                                     <input id="loginput" type="text" placeholder="Name"></input>
                                     <input id="loginput" type="email" placeholder="Email"></input>
                                     <input id="loginput" type="password" placeholder="Password"></input>
-                                    <button id="loginbutton">Register</button>
+                                    <a href="/login#s2">
+                                        <button href="/login#s2" type="button"   id="loginbutton" >Register</button>
+                                    </a>
                                     <span id="underl" onClick={handleLoginClick}>Already have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -60,16 +62,12 @@ const LoginLayout = (props) => {
                                     <input id="loginput" type="email" placeholder="Email"></input>
                                     <input id="loginput" type="password" placeholder="Password"></input>
                                     <div class="content">
-                                        <div class="checkbox">
-                                            <input type="checkbox" name="checkbox" id="checkbox"></input>
-                                            <label for="Remember me"></label>
-                                        </div>
                                         <div class="pass-link">
                                             <a id="loginforget" href="#">Forgot your password?</a>
                                         </div>
                                     </div>
                                     <a href="/">
-                                        <button href="/" type='button' id="loginbutton"  >Login</button>
+                                        <button href="/" type='button' id="loginbutton">Login</button>
                                     </a>
                                     <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                                     <div class="social-container">
@@ -84,7 +82,7 @@ const LoginLayout = (props) => {
                             <div class="overlay-container">
                                 <div class="overlay">
                                     <div class="overlay-panel overlay-left">
-                                        <h1 class="title">Welcome to Syncal</h1>
+                                        <h1  id="overlaytitle" class="title">Welcome to Syncal</h1>
                                         <p id="plogin">Lets build our world together</p>
                                         <button class="ghost" id="loginbutton" onClick={handleLoginClick}>Login
                                             <i class="lni-lni-arrow-left-right"></i>
@@ -92,7 +90,7 @@ const LoginLayout = (props) => {
 
                                     </div>
                                     <div class="overlay-panel overlay-right">
-                                        <h1 class="title">Hello from Syncal</h1>
+                                        <h1 id="overlaytitle"class="title">Hello from Syncal</h1>
                                         <p id="plogin">If you don't have an account yet,join us by register and start your journey</p>
                                         <button class="ghost" id="loginbutton" onClick={handleRegisterClick}>Register
                                             <i class="lni-lni-arrow-right-left"></i>
@@ -104,7 +102,7 @@ const LoginLayout = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ height: '12vh' }}>
+                        <div style={{ height: '10vh' }}>
 
                         </div>
                     </>

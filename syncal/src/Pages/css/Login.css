@@ -26,7 +26,6 @@
 
 #loginfooter {
   background-color: var(--background-color);
-  height: 10;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -35,28 +34,44 @@
 }
 
 
+#introsubtitle{
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 0.5px;
+  color:var(--plogin-color);
+  margin-top: 2rem;
+  position: relative;
 
-.syncal {
-  border-radius: 10%;
 }
 
-@media(max-width: 1300px) {
-  #SyncalImage {
-    display: none !important;
-  }
+
+#img {
+  align-items: center;
+  height: 47rem;
 }
 
+#introttitle{
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
 
 
 #introtitle {
-  font-weight: 700;
-  letter-spacing: -1.5px;
+  margin-top: 5rem;
+  font-weight: 800;
   margin: 0;
-  font-size:200px;
+  font-size:18rem;
   color:var(--font-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #scrolldownbuttonintro{
+  margin-top: 3rem;
   width: 100% ;
   display: flex;
   justify-content: center;
@@ -66,31 +81,33 @@
 }
 
 
-h1.title {
+#overlaytitle {
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
-  margin-bottom: 15px;
-  font-size: 45px;
-  line-height: 45px;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  line-height: 2rem;
   margin: 0;
   text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
 }
 
 #plogin {
-  font-size: 17px;
-  font-weight: 100;
-  line-height: 20px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1rem;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+  margin-top:2rem;
   color:var(--plogin-color);
+  line-height: 1.5;
 }
 
 #loginforget {  
   color: #333;
-  font-size: 14px;
+  font-size: 1.2rem;
   text-decoration: none;
-  margin: 15px 0;
+  margin-top:1rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -102,7 +119,7 @@ h1.title {
 .content {
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 6rem;
   align-items: center;
   justify-content: space-around;
 }
@@ -131,13 +148,16 @@ h1.title {
   border: 1px solid var(--button-color);
   background-color: var(--button-color);
   color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 700;
   margin: 10px;
   padding: 12px 80px;
   letter-spacing: 1px;
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
+  height:4rem ;
+  width: 15rem;
+  align-items: center;
 
 }
 
@@ -152,8 +172,8 @@ h1.title {
 }
 
 #underl {
-  font-size: 14px;
-  margin-top: 25px;
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
   color: var(--tags-color);
 }
 
@@ -210,11 +230,12 @@ h1.title {
 
 #loginput {
   background-color: #eee;
-  border-radius: 10px;
-  border: none;
+  border-radius: 2rem;
   padding: 12px 15px;
-  margin: 8px 0;
-  width: 60%;
+  border:none;
+  margin: 1rem 0;
+  width: 70%;
+  height: 4rem;
   position: center ;
 }
 
@@ -225,8 +246,8 @@ h1.title {
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  height: 40rem;
-  width: 1200px;
+  height: 45rem;
+  width: 90rem;
 }
 
 #SyncalImage {
@@ -315,7 +336,6 @@ h1.title {
 }
 
 .overlay {
-  background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -379,6 +399,7 @@ h1.title {
 
 .social-container {
   margin: 20px 0;
+  margin-bottom: 0;
 }
 
 .social-container a {
@@ -388,10 +409,11 @@ h1.title {
   justify-content: center;
   align-items: center;
   margin: 0 5px;
-  height: 40px;
-  width: 40px;
+  height: 3.5rem;
+  width: 3.5rem;
   transition: 0.3s ease-in-out;
   color:black;
+  margin-left: 1rem;
 
 }
 
@@ -404,7 +426,7 @@ h1.title {
   --background-color: white;
   --font-color: #333;
   --link-color: black;
-  --div-color: #fff;
+  --div-color: #e3f4f3;
   --form-color: #fff;
   --img-color: #eee;
   --syncal-img: ../images/syncal.png;
@@ -463,9 +485,6 @@ h {
 }
 
 
-#img {
-  align-items: center;
-}
 
 #logregcont {
   background-color: var(--logregcont-color);
@@ -488,9 +507,9 @@ h {
   margin: 0;
   float: left;
   position: flex;
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2rem;
   letter-spacing: 0.5px;
   color:var(--plogin-color);
 }
@@ -498,9 +517,9 @@ h {
 
 #logtitle {
   font-weight: 700;
+  font-size:3rem;
+  margin-bottom: 2rem;
   letter-spacing: -1.5px;
-  margin: 0;
-  margin-bottom: 15px;
   color: black;
 
 }

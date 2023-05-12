@@ -94,3 +94,8 @@ reportar erros e bugs encontrados
 
 
 
+----Vasco-----
+Design:
+
+prototipo tinha cores demasiado claras no light mode do login, acabamos por colocar cores diferentes para o light mode 
+algumas letras pequenas e pouco perceptivel, aumentamos o tamanho das letras e dos componentes 
