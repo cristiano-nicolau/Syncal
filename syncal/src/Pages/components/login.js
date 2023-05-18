@@ -24,7 +24,7 @@ const LoginLayout = (props) => {
 
         setTimeout(() => {
             setShowModal(false);
-            window.location.href = "/login?#s2"; // Replace with your target page URL
+            window.location.href = "/login#s2"; // Replace with your target page URL
         }, 3000);
         setActivePanel('login');
     };
@@ -72,8 +72,7 @@ const LoginLayout = (props) => {
                                     <input id="loginput" type="text" placeholder="Name"></input>
                                     <input id="loginput" type="email" placeholder="Email"></input>
                                     <input id="loginput" type="password" placeholder="Password"></input>
-                                    <button type="submit" id="registerbutton" onClick={handleRegisterClickModle} >Register</button>
-
+                                    <button type="button" id="registerbutton" onClick={handleRegisterClickModle} >Register</button>
                                     <span id="underl" onClick={handleLoginClick}>Already have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -87,14 +86,8 @@ const LoginLayout = (props) => {
                                     <h1 id="logtitle">Login here</h1>
                                     <input id="loginput" type="email" placeholder="Email"></input>
                                     <input id="loginput" type="password" placeholder="Password"></input>
-                                    <div class="content">
-                                        <div class="pass-link">
-                                            <a id="loginforget" href="#">Forgot your password?</a>
-                                        </div>
-                                    </div>
-                                    <a href="/">
-                                        <button type='button' id="loginbutton" onClick={}>Login</button>
-                                    </a>
+                                    <span id="underlink" >Forget your password?</span>
+                                    <button type='button' id="loginbutton" onClick={handleLoginClickModal}>Login</button>
                                     <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -136,11 +129,21 @@ const LoginLayout = (props) => {
                                 </div>
                             </div>
                         )}
+
+                        {/* Modal */}
+                        {showLogin && (
+                            <div id="modal">
+                                <div id="modal-content">
+                                    <h2>Loggin in</h2>
+                                </div>
+                            </div>
+                        )}
+
                         <div style={{ height: '10vh' }}>
 
                         </div>
 
-                        
+
 
 
                     </>
