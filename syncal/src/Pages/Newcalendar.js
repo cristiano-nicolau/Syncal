@@ -21,7 +21,7 @@ function Newcalendar() {
                         <div id='inlineform'>
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Add members</Form.Label>
-                                <Form.Control type="password" placeholder="" />
+                                <Form.Control type="text" placeholder="" />
                             </Form.Group>
                             <Button variant="primary" id='memberbut' type="submit">
                                 Add member

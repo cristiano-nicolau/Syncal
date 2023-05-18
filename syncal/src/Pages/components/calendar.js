@@ -137,6 +137,9 @@ function Calendar() {
 
   return (
     <div className="App">
+      <a href="/">
+        <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
+      </a>
       <Container>
         <Row style={{ marginBottom: 20 }}>
           <Col
@@ -148,13 +151,10 @@ function Calendar() {
           >
 
           </Col>
-          <Col
-            sm={{ size: 3, offset: 6 }}
-            md={{ size: 3, offset: 6 }}
-            style={{
-              paddingRight: 15
-            }}
-          >
+          
+        </Row>
+        <Row>
+          <Col md={12}>
             <Button
               style={{ float: "right" }}
               color="secondary"
@@ -162,14 +162,12 @@ function Calendar() {
             >
               Add schedule
             </Button>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
             <FullCalendar
               ref={calendarRef}
 
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+              
+        
               headerToolbar={{
                 left: "prev,today,next",
                 center: "title",

@@ -10,3 +10,38 @@
     color: #00b294;
   }
   
+ button.fc-timeGridDay-button.fc-button.fc-button-primary
+ {
+  display:none !important;
+ }
+ 
+ button.fc-timeGridWeek-button.fc-button.fc-button-primary.fc-button-active
+ {
+  display: none !important;
+ }
+
+ button.fc-dayGridMonth-button.fc-button.fc-button-primary
+ {
+  display: none !important;
+ }
+
+ div.fc-view-harness.fc-view-harness-active
+ {
+  height: 80vh !important;
+ }
+
+ .fc .fc-daygrid-day.fc-day-today
+ {
+  background-color: #6c757d !important;
+
+ }
+
+ .fc .fc-timegrid-col.fc-day-today{
+  background-color: #6c757d !important;
+
+ }
+
+ div.fc-view-harness.fc-view-harness-active 
+ {
+  width: 57.8vw !important;
+ }

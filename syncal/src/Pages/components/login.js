@@ -93,7 +93,7 @@ const LoginLayout = (props) => {
                                         </div>
                                     </div>
                                     <a href="/">
-                                        <button type='button' id="loginbutton" onClick={}>Login</button>
+                                        <button type='button' id="loginbutton" >Login</button>
                                     </a>
                                     <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                                     <div class="social-container">

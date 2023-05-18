@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Navegationbar from './components/navbar';
-import calendariotafoda from "./components/calendar";
+import Calendar from "./components/calendar";
 
 function Schedule() {
     return (
-        <div>
+        <div id='page'>
             <Navegationbar></Navegationbar>
             <div>
-                <calendariotafoda></calendariotafoda>
+                <Calendar></Calendar>
             </div>
         </div>
     );
