@@ -204,9 +204,23 @@
   font-size: 1.2rem;
   margin-top: 1.2rem;
   color: var(--tags-color);
+  margin-bottom: 1.2rem;
 }
 
 #underl:hover {
+  color: #4bb6b7;
+  cursor: pointer;
+
+}
+
+#underlink {
+  font-size: 1.2rem;
+  margin-top: 1.2rem;
+  color: var(--tags-color);
+  margin-bottom: 1.2rem;
+}
+
+#underlink:hover {
   color: #4bb6b7;
   cursor: pointer;
 
@@ -313,7 +327,6 @@
 .login-container {
   left: 0;
   width: 50%;
-  z-index: 0;
 }
 
 .container.right-panel-active .login-container {
@@ -324,7 +337,6 @@
   left: 0;
   width: 50%;
   opacity: 0;
-  z-index: 1;
 }
 
 .container.right-panel-active .register-container {
