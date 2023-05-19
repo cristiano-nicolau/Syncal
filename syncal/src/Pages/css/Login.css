@@ -187,6 +187,7 @@
   height:4rem ;
   width: 15rem;
   align-items: center;
+  margin-top: 1rem;
 
 }
 
@@ -272,6 +273,7 @@
 }
 
 #loginput {
+  display: inline-block;
   background-color: #eee;
   border-radius: 2rem;
   padding: 12px 15px;
@@ -632,17 +634,25 @@ input:checked+.slider {
   border-radius: 12px;
   padding: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  width: 13rem;
+  width: 15rem;
   height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 2rem;
-  bottom: 2rem;
+  top:2rem;
+  right:45%;
+  left: 45%;
 }
 
 #modal-content {
-  padding: 20px;
+  padding: 2rem;
   color: var(--modaltext-color);
 
+}
+
+error{
+ color: red;
+  font-size: 1rem;
+
+  
 }

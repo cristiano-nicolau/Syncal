@@ -3,6 +3,8 @@ import { useSpring, animated } from 'react-spring';
 import img1 from '../images/syncal.png';
 import img2 from '../images/syncalwhite.png';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+
 
 const LoginLayout = (props) => {
     const [activePanel, setActivePanel] = useState('login');
@@ -24,8 +26,8 @@ const LoginLayout = (props) => {
 
         setTimeout(() => {
             setShowModal(false);
-            window.location.href = "/login?#s2"; // Replace with your target page URL
-        }, 3000);
+            window.location.href = "/login#s2"; // Replace with your target page URL
+        }, 1500);
         setActivePanel('login');
     };
 
@@ -44,9 +46,42 @@ const LoginLayout = (props) => {
     };
 
 
+    const registerForm = useForm({ mode: "all" });
+    const loginForm = useForm({ mode: "all" });
 
 
-    const ani = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1500 } });
+    const [username, setName] = useState()
+    const [regemail, setemail] = useState()
+    const [regpass, setpass] = useState()
+
+
+    const onSubmitRegister = (data) => {
+
+
+        if (registerForm.formState.isValid) {
+            console.log(data);
+            handleRegisterClickModle();
+
+        }
+
+        setName("");
+        setemail("");
+        setpass("");
+
+    };
+
+    const onSubmitLogin = (data) => {
+
+
+        if (loginForm.formState.isValid) {
+            console.log(data);
+            handleLoginClickModal();
+        }
+    };
+
+
+
+    const ani = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1000 } });
 
 
     return (
@@ -67,14 +102,36 @@ const LoginLayout = (props) => {
                         </div>
                         <div id="logincontainer" className={`container ${activePanel === 'register' ? 'right-panel-active' : ''}`}>
                             <div class="form-container register-container" id="logregcont">
-                                <form id="loginform">
+                                <form id="loginform" onSubmit={registerForm.handleSubmit(onSubmitRegister)}>
                                     <h1 id="logtitle">Register here</h1>
-                                    <input id="loginput" type="text" placeholder="Name"></input>
-                                    <input id="loginput" type="email" placeholder="Email"></input>
-                                    <input id="loginput" type="password" placeholder="Password"></input>
-                                    <button type="submit" id="registerbutton" onClick={handleRegisterClickModle} >Register</button>
-
-                                    <span id="underl" onClick={handleLoginClick}>Already have an account?</span>
+                                    <input id="loginput" type="text" placeholder="Name" name="name" value={username}
+                                        {...registerForm.register("name", { required: true })} />
+                                    <error>
+                                        <p>{registerForm.formState.errors.name?.type === "required" && "Name is required"}</p>
+                                    </error>
+                                    <input id="loginput" type="text" placeholder="Email" name="email" value={regemail} {...registerForm.register("email", {
+                                        required: true,
+                                        pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i,
+                                    })}></input>
+                                    <error>
+                                        <p>{registerForm.formState.errors.email?.type === "required" && "Email is required"}</p>
+                                        <p>{registerForm.formState.errors.email?.type === "pattern" &&
+                                            "Entered email is in wrong format"}</p>
+                                    </error>
+                                    <input id="loginput" type="password" placeholder="Password" name="password" value={regpass}  {...registerForm.register("password", {
+                                        required: true,
+                                        minLength: 5,
+                                        maxLength: 20,
+                                    })}></input>
+                                    <error>
+                                        <p>{registerForm.formState.errors.password?.type === "required" && "Password is required"}</p>
+                                        <p>{registerForm.formState.errors.password?.type === "minLength" &&
+                                            "Entered password is less than 5 characters"}</p>
+                                        <p>{registerForm.formState.errors.password?.type === "maxLength" &&
+                                            "Entered password is more than 20 characters"}</p>
+                                    </error>
+                                    <button type="submit" id="registerbutton" disabled={!registerForm.formState.isValid} >Register</button>
+                                    <span id="underl" onClick={handleLoginClick} > Already have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
                                         <a href="#" class="social"><i class="fa fa-google"></i></a>
@@ -83,18 +140,21 @@ const LoginLayout = (props) => {
                                 </form>
                             </div>
                             <div class="form-container login-container" id="logregcont">
-                                <form id="loginform">
+                                <form id="loginform" onSubmit={loginForm.handleSubmit(onSubmitLogin)}>
                                     <h1 id="logtitle">Login here</h1>
-                                    <input id="loginput" type="email" placeholder="Email"></input>
-                                    <input id="loginput" type="password" placeholder="Password"></input>
-                                    <div class="content">
-                                        <div class="pass-link">
-                                            <a id="loginforget" href="#">Forgot your password?</a>
-                                        </div>
-                                    </div>
-                                    <a href="/">
-                                        <button type='button' id="loginbutton" onClick={}>Login</button>
-                                    </a>
+                                    <input id="loginput" type="email" placeholder="Email" {...loginForm.register("email", { required: true, pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i, })}></input>
+                                    <error>
+                                        <p>{loginForm.formState.errors.email?.type === "required" && "Email is required"}</p>
+                                        <p>{loginForm.formState.errors.email?.type === "pattern" && "Entered wrong email"}</p>
+                                    </error>
+                                    <input id="loginput" type="password" placeholder="Password" {...loginForm.register("password", {
+                                        required: true,
+                                    })}></input>
+                                    <error>
+                                        <p>{loginForm.formState.errors.password?.type === "required" && "Password is required"}</p>
+                                    </error>
+                                    <span id="underlink" >Forget your password?</span>
+                                    <button type='submit' id="loginbutton" disabled={!loginForm.formState.isValid}>Login</button>
                                     <span id="underl" onClick={handleRegisterClick}>Dont have an account?</span>
                                     <div class="social-container">
                                         <a href="#" class="social"><i class="fa fa-facebook"></i></a>
@@ -136,11 +196,21 @@ const LoginLayout = (props) => {
                                 </div>
                             </div>
                         )}
+
+                        {/* Modal */}
+                        {showLogin && (
+                            <div id="modal">
+                                <div id="modal-content">
+                                    <h2>Logging in</h2>
+                                </div>
+                            </div>
+                        )}
+
                         <div style={{ height: '10vh' }}>
 
                         </div>
 
-                        
+
 
 
                     </>
