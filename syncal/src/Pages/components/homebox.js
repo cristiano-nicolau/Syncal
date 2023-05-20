@@ -179,8 +179,7 @@ function Homebox() {
                 </Modal.Footer>
             </Modal>
         </>
-        <h5>Day 19</h5>
-        <h6>From 20:00 to </h6>
+        <h5>Day 28</h5>
             <>
             <button onClick={() => handleShow(9)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Festa de Anos</button>
 
