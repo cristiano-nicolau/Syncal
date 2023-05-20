@@ -34,7 +34,7 @@ function Navegationbar() {
                     />
                     <Button variant="outline-success">Search</Button>
                 </Form>
-                <NavDropdown title="Joaquim Andrade" id="navbarScrollingDropdown">
+                <NavDropdown title="João Dias" id="navbarScrollingDropdown">
                     <NavDropdown.Item href="#action3">Profile</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">
                         Settings

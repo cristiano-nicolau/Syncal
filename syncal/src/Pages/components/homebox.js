@@ -11,7 +11,7 @@ function Homebox() {
     return (
         <div id='homebox'>
             <h1>
-                Welcome $USER,
+                Welcome João Dias,
             </h1>
 
             <div id='HomeButtons' class="container space-around" >
