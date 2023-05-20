@@ -190,23 +190,110 @@ function Calendar() {
               initialEvents={[
                 {
                   id: nanoid(),
+                  title: "Festa de Anos",
+                  date: "2023-05-28"
+                },
+                {
+                  id: nanoid(),
+                  title: "Consulta",
+                  start: "2023-05-31T11:00:00",
+                  end: "2023-05-31T12:00:00"
+                  // date: "2020-07-30"
+                },
+                {
+                  id: nanoid(),
+                  title: "Viagem para Aveiro",
+                  date: "2023-05-29"
+                },
+                {
+                  id: nanoid(),
                   title: "Futebol com os amigos",
-                  start: "2023-05-10T18:00:00",
-                  end: "2023-05-10T20:30:00"
+                  start: "2023-05-30T18:00:00",
+                  end: "2023-05-30T20:30:00"
+                  // date: "2020-07-30"
+                },
+                {
+                  id: nanoid(),
+                  title: "Aula de CD",
+                  start: "2023-05-30T11:00:00",
+                  end: "2023-05-30T13:30:00"
+                  // date: "2020-07-30"
+                },
+                {
+                  id: nanoid(),
+                  title: "Aula de C",
+                  start: "2023-05-30T14:00:00",
+                  end: "2023-05-30T15:00:00"
+                  // date: "2020-07-30"
+                },
+                {
+                  id: nanoid(),
+                  title: "Aula de PDS",
+                  start: "2023-05-30T15:00:00",
+                  end: "2023-05-30T17:00:00"
+                  // date: "2020-07-30"
+                },
+                {
+                  id: nanoid(),
+                  title: "Aula de IHC",
+                  start: "2023-05-31T14:00:00",
+                  end: "2023-05-31T16:00:00"
                   // date: "2020-07-30"
                 },
                 { 
                   id: nanoid(),
-                  title: "Conferencia", 
-                  start: "2023-06-01T10:00:00",
-                  end: "2023-06-01T18:30:00" 
+                  title: "Reunião projeto BD", 
+                  start: "2023-05-31T17:00:00",
+                  end: "2023-05-31T19:30:00" 
                 },
                 {    
                   id: nanoid(),
-                  title: "Viagem para o Rio de Janeiro",
-                  start: "2023-05-06",
-                  end: "2023-05-09"
+                  title: "Cinema",
+                  start: "2023-05-31T21:40:00",
+                  end: "2023-05-31T23:30:00"
                 },
+                { 
+                  id: nanoid(),
+                  title: "Aula de BD", 
+                  start: "2023-06-01T09:00:00",
+                  end: "2023-06-01T11:00:00" 
+                },                { 
+                  id: nanoid(),
+                  title: "Aula de C", 
+                  start: "2023-06-01T11:00:00",
+                  end: "2023-06-01T13:00:00" 
+                },                { 
+                  id: nanoid(),
+                  title: "Aula de IHC", 
+                  start: "2023-06-01T14:00:00",
+                  end: "2023-06-01T16:00:00" 
+                },                { 
+                  id: nanoid(),
+                  title: "Aula de C", 
+                  start: "2023-06-01T16:00:00",
+                  end: "2023-06-01T17:00:00" 
+                },                { 
+                  id: nanoid(),
+                  title: "Futebolada", 
+                  start: "2023-06-01T18:30:00",
+                  end: "2023-06-01T21:00:00" 
+                },             { 
+                  id: nanoid(),
+                  title: "Viagem ", 
+                  start: "2023-06-02T15:00:00",
+                  end: "2023-06-02T16:00:00" 
+                },             { 
+                  id: nanoid(),
+                  title: "Trabalhar nos projetos", 
+                  start: "2023-06-02T17:30:00",
+                  end: "2023-06-01T21:00:00" 
+                },
+                {
+                  id: nanoid(),
+                  title: "Trabalhar Restaurante",
+                  date: "2023-06-03"
+                },               
+
               ]} 
               select={handleDateSelect}
               eventClick={handleEventClick}
