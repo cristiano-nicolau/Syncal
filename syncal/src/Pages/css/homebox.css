@@ -57,3 +57,8 @@ div.me-auto.my-2.my-lg-0.navbar-nav.navbar-nav-scroll {
 div.nav-item.dropdown {
     margin-left: 14vw !important;
 }
+
+#navbarimg{
+    width: 3vw;
+    height: 3vw;
+}

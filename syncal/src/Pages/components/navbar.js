@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, { useEffect, useState } from "react";
+import imgwhite from '../images/syncal.png'
 
 function Navegationbar() {
     const [time, setTime] = useState(new Date())
@@ -14,7 +15,10 @@ function Navegationbar() {
     }, [])
     return (
         <Navbar bg="dark" expand="lg">
-            <Navbar.Brand href="/">Syncal</Navbar.Brand>
+            <a href="/">
+            <img img={imgwhite} id="navbarimg" ></img>
+            <Navbar.Brand  style ={{margin:"0 0 0 1rem "}}>Syncal</Navbar.Brand>
+            </a>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
