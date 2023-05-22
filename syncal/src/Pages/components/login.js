@@ -81,6 +81,7 @@ const LoginLayout = (props) => {
 
 
 
+
     const ani = useSpring({ opacity: 1, from: { opacity: 0 }, config: { duration: 1000 } });
 
 
@@ -209,8 +210,6 @@ const LoginLayout = (props) => {
                         <div style={{ height: '10vh' }}>
 
                         </div>
-
-
 
 
                     </>

@@ -479,6 +479,7 @@
   --plogin-color:black;
   --modal--color:#4bb6b7;
   --modaltext-color:white;
+  --background-questionbutton:rgba(52, 53, 65);
 
 }
 
@@ -497,6 +498,7 @@
   --plogin-color:white;
   --modal--color:white;
   --modaltext-color:black;
+  --background-questionbutton:white;
 
 }
 
@@ -655,4 +657,53 @@ error{
   font-size: 1rem;
 
   
+} 
+
+#buttonquestion{
+
+  height: 5rem;
+  width: 5rem;
+  margin-left: 22rem;
+
+
+}
+
+#buttonquestionifself{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border: white;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border:none;
+  border-radius: 1rem;
+  background-color:var(--background-questionbutton) ;
+}
+
+
+#buttonquestiontext{
+  text-align: center;
+  position: center;
+  color:var(--modaltext-color);
+  font-size: 3.5rem;
+
+
+}
+
+#questionh2{
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 4rem;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+
+}
+
+#textquestion{
+  margin-top:4rem;
+  font-size: 1.3rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  line-height: 2rem;
+  line-gap-override: 1rem;
+
 }

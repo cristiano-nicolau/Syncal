@@ -55,9 +55,9 @@ function Homebox() {
         console.log('Saving settings...');
 
         closeModal();
-
-
     };
+
+
 
 
     return (
