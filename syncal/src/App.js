@@ -9,6 +9,7 @@ import NewGroup from './Pages/Newgroup.js';
 import NewEvent from './Pages/NewEvent.js';
 import Groups from './Pages/Groups';
 import Schedule from './Pages/Schedule';
+import Profile from './Pages/ProfilePage.js';
 
 const App = () => {
    return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/newevent" element={<NewEvent />} />
             <Route path="/groups" element={<Groups />} />
             <Route path="/calendar" element={<Schedule />} />
+            <Route path="/profile" element={<Profile />} />
 
 
          </Routes>
