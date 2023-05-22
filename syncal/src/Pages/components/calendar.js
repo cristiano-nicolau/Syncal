@@ -38,9 +38,9 @@ function Calendar() {
 
 
   function handleDateClick(arg) {
-   
+
   }
- 
+
   function handleDateSelect(selectInfo) {
     // console.log(selectInfo.view.type);
     if (
@@ -57,7 +57,7 @@ function Calendar() {
       setModal(true);
     }
 
-    
+
   }
   function renderEventContent(eventInfo) {
     return (
@@ -136,245 +136,248 @@ function Calendar() {
   }
 
   return (
-    <div className="App">
+    <>
       <a href="/">
         <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
       </a>
-      <Container>
-        <Row style={{ marginBottom: 20 }}>
-          <Col
-            sm={{ size: 3 }}
-            md={{ size: 3 }}
-            style={{
-              paddingLeft: 15
-            }}
-          >
+      <div className="App">
 
-          </Col>
-          
-        </Row>
-        <Row>
-          <Col md={12}>
-            <Button
-              style={{ float: "right" }}
-              color="secondary"
-              onClick={() => setModal(true)}
+        <Container>
+          <Row style={{ marginBottom: 20 }}>
+            <Col
+              sm={{ size: 3 }}
+              md={{ size: 3 }}
+              style={{
+                paddingLeft: 15
+              }}
             >
-              Add schedule
-            </Button>
-            <FullCalendar
-              ref={calendarRef}
 
-              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              
-        
-              headerToolbar={{
-                left: "prev,today,next",
-                center: "title",
-                right: "dayGridMonth,timeGridWeek,timeGridDay"
-              }}
-              buttonText={{
-                today: "current",
-                month: "month",
-                week: "week",
-                day: "day",
-                list: "list"
-              }}
-              initialView="timeGridWeek"
-              editable={true}
-              selectable={true}
-              selectMirror={true}
-              dayMaxEvents={true}
-              weekends={weekendsVisible}
-              //
-              initialEvents={[
-                {
-                  id: nanoid(),
-                  title: "Festa de Anos",
-                  date: "2023-05-28"
-                },
-                {
-                  id: nanoid(),
-                  title: "Consulta",
-                  start: "2023-05-31T11:00:00",
-                  end: "2023-05-31T12:00:00"
-                  // date: "2020-07-30"
-                },
-                {
-                  id: nanoid(),
-                  title: "Viagem para Aveiro",
-                  date: "2023-05-29"
-                },
-                {
-                  id: nanoid(),
-                  title: "Futebol com os amigos",
-                  start: "2023-05-30T18:00:00",
-                  end: "2023-05-30T20:30:00"
-                  // date: "2020-07-30"
-                },
-                {
-                  id: nanoid(),
-                  title: "Aula de CD",
-                  start: "2023-05-30T11:00:00",
-                  end: "2023-05-30T13:30:00"
-                  // date: "2020-07-30"
-                },
-                {
-                  id: nanoid(),
-                  title: "Aula de C",
-                  start: "2023-05-30T14:00:00",
-                  end: "2023-05-30T15:00:00"
-                  // date: "2020-07-30"
-                },
-                {
-                  id: nanoid(),
-                  title: "Aula de PDS",
-                  start: "2023-05-30T15:00:00",
-                  end: "2023-05-30T17:00:00"
-                  // date: "2020-07-30"
-                },
-                {
-                  id: nanoid(),
-                  title: "Aula de IHC",
-                  start: "2023-05-31T14:00:00",
-                  end: "2023-05-31T16:00:00"
-                  // date: "2020-07-30"
-                },
-                { 
-                  id: nanoid(),
-                  title: "Reunião projeto BD", 
-                  start: "2023-05-31T17:00:00",
-                  end: "2023-05-31T19:30:00" 
-                },
-                {    
-                  id: nanoid(),
-                  title: "Cinema",
-                  start: "2023-05-31T21:40:00",
-                  end: "2023-05-31T23:30:00"
-                },
-                { 
-                  id: nanoid(),
-                  title: "Aula de BD", 
-                  start: "2023-06-01T09:00:00",
-                  end: "2023-06-01T11:00:00" 
-                },                { 
-                  id: nanoid(),
-                  title: "Aula de C", 
-                  start: "2023-06-01T11:00:00",
-                  end: "2023-06-01T13:00:00" 
-                },                { 
-                  id: nanoid(),
-                  title: "Aula de IHC", 
-                  start: "2023-06-01T14:00:00",
-                  end: "2023-06-01T16:00:00" 
-                },                { 
-                  id: nanoid(),
-                  title: "Aula de C", 
-                  start: "2023-06-01T16:00:00",
-                  end: "2023-06-01T17:00:00" 
-                },                { 
-                  id: nanoid(),
-                  title: "Futebolada", 
-                  start: "2023-06-01T18:30:00",
-                  end: "2023-06-01T21:00:00" 
-                },             { 
-                  id: nanoid(),
-                  title: "Viagem ", 
-                  start: "2023-06-02T15:00:00",
-                  end: "2023-06-02T16:00:00" 
-                },             { 
-                  id: nanoid(),
-                  title: "Trabalhar nos projetos", 
-                  start: "2023-06-02T17:30:00",
-                  end: "2023-06-01T21:00:00" 
-                },
-                {
-                  id: nanoid(),
-                  title: "Trabalhar Restaurante",
-                  date: "2023-06-03"
-                },               
+            </Col>
 
-              ]} 
-              select={handleDateSelect}
-              eventClick={handleEventClick}
+          </Row>
+          <Row>
+            <Col md={12}>
+              <Button
+                style={{ float: "right" }}
+                color="secondary"
+                onClick={() => setModal(true)}
+              >
+                Add schedule
+              </Button>
+              <FullCalendar
+                ref={calendarRef}
 
-              eventDrop={handleEventDrop}
-              eventResize={handleEventResize}
-              dateClick={handleDateClick}
-              eventAdd={(e) => {
-                console.log("eventAdd", e);
-              }}
-              eventChange={(e) => {
-                console.log("eventChange", e);
-              }}
-              eventRemove={(e) => {
-                console.log("eventRemove", e);
-              }}
+                plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+
+
+                headerToolbar={{
+                  left: "prev,today,next",
+                  center: "title",
+                  right: "dayGridMonth,timeGridWeek,timeGridDay"
+                }}
+                buttonText={{
+                  today: "current",
+                  month: "month",
+                  week: "week",
+                  day: "day",
+                  list: "list"
+                }}
+                initialView="timeGridWeek"
+                editable={true}
+                selectable={true}
+                selectMirror={true}
+                dayMaxEvents={true}
+                weekends={weekendsVisible}
+                //
+                initialEvents={[
+                  {
+                    id: nanoid(),
+                    title: "Festa de Anos",
+                    date: "2023-05-28"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Consulta",
+                    start: "2023-05-31T11:00:00",
+                    end: "2023-05-31T12:00:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Viagem para Aveiro",
+                    date: "2023-05-29"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Futebol com os amigos",
+                    start: "2023-05-30T18:00:00",
+                    end: "2023-05-30T20:30:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Aula de CD",
+                    start: "2023-05-30T11:00:00",
+                    end: "2023-05-30T13:30:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Aula de C",
+                    start: "2023-05-30T14:00:00",
+                    end: "2023-05-30T15:00:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Aula de PDS",
+                    start: "2023-05-30T15:00:00",
+                    end: "2023-05-30T17:00:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Aula de IHC",
+                    start: "2023-05-31T14:00:00",
+                    end: "2023-05-31T16:00:00"
+                    // date: "2020-07-30"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Reunião projeto BD",
+                    start: "2023-05-31T17:00:00",
+                    end: "2023-05-31T19:30:00"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Cinema",
+                    start: "2023-05-31T21:40:00",
+                    end: "2023-05-31T23:30:00"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Aula de BD",
+                    start: "2023-06-01T09:00:00",
+                    end: "2023-06-01T11:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Aula de C",
+                    start: "2023-06-01T11:00:00",
+                    end: "2023-06-01T13:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Aula de IHC",
+                    start: "2023-06-01T14:00:00",
+                    end: "2023-06-01T16:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Aula de C",
+                    start: "2023-06-01T16:00:00",
+                    end: "2023-06-01T17:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Futebolada",
+                    start: "2023-06-01T18:30:00",
+                    end: "2023-06-01T21:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Viagem ",
+                    start: "2023-06-02T15:00:00",
+                    end: "2023-06-02T16:00:00"
+                  }, {
+                    id: nanoid(),
+                    title: "Trabalhar nos projetos",
+                    start: "2023-06-02T17:30:00",
+                    end: "2023-06-01T21:00:00"
+                  },
+                  {
+                    id: nanoid(),
+                    title: "Trabalhar Restaurante",
+                    date: "2023-06-03"
+                  },
+
+                ]}
+                select={handleDateSelect}
+                eventClick={handleEventClick}
+
+                eventDrop={handleEventDrop}
+                eventResize={handleEventResize}
+                dateClick={handleDateClick}
+                eventAdd={(e) => {
+                  console.log("eventAdd", e);
+                }}
+                eventChange={(e) => {
+                  console.log("eventChange", e);
+                }}
+                eventRemove={(e) => {
+                  console.log("eventRemove", e);
+                }}
+              />
+            </Col>
+          </Row>
+        </Container>
+
+        <CustomModal
+          title={state.state === "update" ? "Update Event" : "Add Event"}
+          isOpen={modal}
+          toggle={handleCloseModal}
+          onCancel={handleCloseModal}
+          onSubmit={state.clickInfo ? handleEdit : handleSubmit}
+          submitText={state.clickInfo ? "Update" : "Save"}
+          onDelete={state.clickInfo && handleDelete}
+          deleteText="Delete"
+        >
+          <FormGroup>
+            <Label for="exampleEmail">Title</Label>
+            <Input
+              type="text"
+              name="title"
+              placeholder="with a placeholder"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
-          </Col>
-        </Row>
-      </Container>
+          </FormGroup>
+          <FormGroup>
+            <Label for="exampleEmail">From - End</Label>
+            <DateRangePicker
+              initialSettings={{
+                locale: {
+                  format: "M/DD hh:mm A"
+                },
+                startDate: start,
+                endDate: end,
+                timePicker: true
+              }}
+              onApply={(event, picker) => {
 
-      <CustomModal
-        title={state.state === "update" ? "Update Event" : "Add Event"}
-        isOpen={modal}
-        toggle={handleCloseModal}
-        onCancel={handleCloseModal}
-        onSubmit={state.clickInfo ? handleEdit : handleSubmit}
-        submitText={state.clickInfo ? "Update" : "Save"}
-        onDelete={state.clickInfo && handleDelete}
-        deleteText="Delete"
-      >
-        <FormGroup>
-          <Label for="exampleEmail">Title</Label>
-          <Input
-            type="text"
-            name="title"
-            placeholder="with a placeholder"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="exampleEmail">From - End</Label>
-          <DateRangePicker
-            initialSettings={{
-              locale: {
-                format: "M/DD hh:mm A"
-              },
-              startDate: start,
-              endDate: end,
-              timePicker: true
-            }}
-            onApply={(event, picker) => {
+                setStart(new Date(picker.startDate));
+                setEnd(new Date(picker.endDate));
+              }}
+            >
+              <input className="form-control" type="text" />
+            </DateRangePicker>
+          </FormGroup>
+        </CustomModal>
 
-              setStart(new Date(picker.startDate));
-              setEnd(new Date(picker.endDate));
-            }}
-          >
-            <input className="form-control" type="text" />
-          </DateRangePicker>
-        </FormGroup>
-      </CustomModal>
-
-      <CustomModal
-        title={state.state === "resize" ? "Resize Event" : "Drop Event"}
-        isOpen={confirmModal}
-        toggle={() => {
-          state.checkInfo.revert();
-          setConfirmModal(false);
-        }}
-        onCancel={() => {
-          state.checkInfo.revert();
-          setConfirmModal(false);
-        }}
-        cancelText="Cancel"
-        onSubmit={() => setConfirmModal(false)}
-        submitText={"OK"}
-      >
-        Do you want to {state.state} this event?
-      </CustomModal>
-    </div>
+        <CustomModal
+          title={state.state === "resize" ? "Resize Event" : "Drop Event"}
+          isOpen={confirmModal}
+          toggle={() => {
+            state.checkInfo.revert();
+            setConfirmModal(false);
+          }}
+          onCancel={() => {
+            state.checkInfo.revert();
+            setConfirmModal(false);
+          }}
+          cancelText="Cancel"
+          onSubmit={() => setConfirmModal(false)}
+          submitText={"OK"}
+        >
+          Do you want to {state.state} this event?
+        </CustomModal>
+      </div>
+    </>
   );
 }
 export default Calendar;

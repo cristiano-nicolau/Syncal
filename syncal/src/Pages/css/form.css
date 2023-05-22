@@ -23,7 +23,7 @@
 button.btn.btn-outline-secondary.backbut {
     position: fixed;
     /* or absolute */
-    top: 7%;
+    top: 10%;
     left: 3%;
 }
 
