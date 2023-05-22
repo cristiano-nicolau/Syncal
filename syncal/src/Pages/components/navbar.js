@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import React, { useEffect, useState } from "react";
-import imgwhite from '../images/syncal.png'
+import imgwhite from '../images/syncalwhite.png';
 
 function Navegationbar() {
     const [time, setTime] = useState(new Date())
