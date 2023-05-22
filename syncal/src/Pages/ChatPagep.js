@@ -1,6 +1,6 @@
 import react, { useState } from 'react';
 import Navegationbar from './components/navbar';
-import Chat from './components/ChatPage';
+import ChatPage from './components/ChatPage';
 
 function ChatPagep() {
 
@@ -8,7 +8,7 @@ function ChatPagep() {
 
         <div>
             <Navegationbar/>
-            <Chat/>
+            <ChatPage/>
         </div>
     );
 
