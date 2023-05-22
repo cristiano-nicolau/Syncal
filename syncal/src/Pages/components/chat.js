@@ -56,7 +56,7 @@ function Chat() {
   return (
     //ir para a pagina calendar.js quando clicar no button
     <><div>
-      <Button variant="primary" href='calendar'>calendar</Button>
+      <Button class="btn btn-outline-secondary backbut" style={{position:"fixed", left:"3%",top:"10%"}} href='calendar'>Calendar</Button>
     </div>
       <Container fluid>
         <Row>

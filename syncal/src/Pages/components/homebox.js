@@ -82,8 +82,8 @@ function Homebox() {
                         <button href="/calendar" type="button" class="btn btn-outline-secondary">My schedules</button>
                     </a>
                     <button onClick={openModal} class="btn btn-outline-secondary">Sharing Options</button>
-                    <a href="/groups">
-                        <button type="button" href='/groups' class="btn btn-outline-secondary">Group chat</button>
+                    <a href="/chat">
+                        <button type="button" href='/chat' class="btn btn-outline-secondary">Group chat</button>
                     </a>
                 </div>
                 <h2>
