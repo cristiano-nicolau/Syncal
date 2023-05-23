@@ -131,8 +131,8 @@ function ChatPage() {
               onChange={handleMessageChange}
               id="inputchat"
             />
-            <a href="/calendar">
-            <button href='/calendar' id="buttonchat">Calendar</button>
+            <a href="/calendar_groups">
+            <button href='/calendar_groups' id="buttonchat">Calendar</button>
             </a>
             <button onClick={handleSendMessage} id="buttonchat2">Send</button>
           </div>

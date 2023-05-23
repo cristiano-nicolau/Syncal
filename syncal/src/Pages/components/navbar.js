@@ -86,7 +86,7 @@ function Navegationbar(props) {
                         Settings
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/login">
+                    <NavDropdown.Item href="/">
                         Logout
                     </NavDropdown.Item>
                 </NavDropdown>

@@ -11,6 +11,7 @@ import Groups from './Pages/Groups';
 import Schedule from './Pages/Schedule';
 import Profile from './Pages/ProfilePage.js';
 import ChatPagep from './Pages/ChatPagep';
+import Schedule2 from './Pages/Schedule2';
 
 const App = () => {
    return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/newevent" element={<NewEvent />} />
             <Route path="/groups" element={<Groups />} />
             <Route path="/calendar" element={<Schedule />} />
+            <Route path="/calendar_groups" element={<Schedule2 />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/chat" element={<ChatPagep />} />
 
