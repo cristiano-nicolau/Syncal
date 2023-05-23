@@ -57,7 +57,7 @@ function Navegationbar(props) {
 
     return (
         <Navbar bg="dark" expand="lg">
-            <a href="/">
+            <a href="/home">
             <img src={require("../images/syncalwhite.png")} id="navbarimg" ></img>
             <Navbar.Brand  style ={{margin:"0 0 0 1rem "}}>Syncal</Navbar.Brand>
             </a>

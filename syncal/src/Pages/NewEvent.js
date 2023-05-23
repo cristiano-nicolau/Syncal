@@ -8,14 +8,14 @@ function NewEvent() {
     const [show, setShow] = useState(false);
     let navigate = useNavigate();
     const handleClose = () => {
-        let path = `/`;
+        let path = `/home`;
         navigate(path);
     };
     const handleShow = () => setShow(true);
     return (
         <div>
             <Navegationbar></Navegationbar>
-            <a href="/">
+            <a href="/home">
                 <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
             </a>
             <div class='formtype'>

@@ -41,7 +41,7 @@ const LoginLayout = (props) => {
 
         setTimeout(() => {
             setShowLogin(false);
-            window.location.href = "/"; // Replace with your target page URL
+            window.location.href = "/home"; // Replace with your target page URL
         }, 3000);
     };
 

@@ -78,7 +78,7 @@ function ChatPage() {
   return (
     
     <div id="pagechat">
-      <a href="/">
+      <a href="/home">
         <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
       </a>
       <div className="chat-container">

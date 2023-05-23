@@ -137,7 +137,7 @@ function Calendar() {
 
   return (
     <>
-      <a href="/">
+      <a href="/home">
         <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
       </a>
       <div className="App">
