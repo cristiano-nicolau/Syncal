@@ -10,7 +10,7 @@
 .chat-container {
     width: 75%;
     height: 85%;
-    margin: 4% 0 0 12.5%;
+    margin: 4% 0 0 10%;
     border:none;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 0;
@@ -70,6 +70,7 @@
 .chat-content {
     width: 70%;
     height: 100%;
+    top: 0%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -120,23 +121,27 @@
 
 .message-text{
     float: right;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 4rem;
 }
 
-.message-sender {
+.message-sender {   
     font-weight: bold;
     margin-bottom: 0.1rem;
     font-size: 1.3rem;
+    width: 15%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
 }
+ 
 
-.message-sender.self {
-    text-align: right;
-}
 
-.message-sender.other {
-    text-align: left;
-}
 
 
 .chat-footer {
@@ -226,3 +231,12 @@
 
 
 }
+
+
+
+#contentmodalperson{
+    height: 15rem;
+    width: 12rem;
+
+}
+
