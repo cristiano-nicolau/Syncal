@@ -76,7 +76,11 @@ function ChatPage() {
   );
 
   return (
+    
     <div id="pagechat">
+      <a href="/">
+        <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
+      </a>
       <div className="chat-container">
         <div className="chat-selector">
           <input
@@ -103,6 +107,7 @@ function ChatPage() {
             <>
               <div className="chat-header">
                 <h2 id="textheaderchat">{messages[selectedChat][0].sender}</h2>
+                <p id="headerdots">...</p>
               </div>
               <div className="chat-messages">
                 {filteredMessages.map((msg, index) => (
@@ -124,8 +129,12 @@ function ChatPage() {
               placeholder="Type your message..."
               value={message}
               onChange={handleMessageChange}
+              id="inputchat"
             />
-            <button onClick={handleSendMessage} id="buttonchat">Send</button>
+            <a href="/calendar">
+            <button href='/calendar' id="buttonchat">Calendar</button>
+            </a>
+            <button onClick={handleSendMessage} id="buttonchat2">Send</button>
           </div>
         </div>
       </div>

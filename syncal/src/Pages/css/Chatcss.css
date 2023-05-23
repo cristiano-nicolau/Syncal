@@ -11,6 +11,7 @@
     width: 75%;
     height: 85%;
     margin: 4% 0 0 12.5%;
+    border:none;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 0;
 }
@@ -26,6 +27,10 @@
     background-color: #212529;
     color:white;
     font-size: 1.2rem;
+    border:none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 0;
+    border-right: 0.2rem solid white;
 }
 
 
@@ -71,7 +76,20 @@
     overflow: hidden;
     position: relative;
     display: inline-block;
+    border:none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 0;
 }
+
+#headerdots{
+    font-size:6rem;
+    color:white;
+    margin-bottom: 4rem;
+    margin-right: 1rem;
+
+}
+
+
 
 .chat-header {
     display: flex;
@@ -81,7 +99,7 @@
     border-bottom: 1px solid #ccc;
     z-index: 1;
     background-color: #212529;
-    height: 6rem;;
+    height: 6rem;;;
 }
 
 
@@ -95,12 +113,21 @@
 
 .message {
     margin-bottom: 10px;
-    max-width: 70%;
+    max-width: 100%;
+   align-items: center;
+
+}
+
+.message-text{
+    float: right;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
 
 .message-sender {
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 0.1rem;
+    font-size: 1.3rem;
 }
 
 .message-sender.self {
@@ -163,6 +190,16 @@
     background-color: white;
     border-radius: 1rem;
     border: 0.2rem solid white;
+    margin-right: 0.5rem;
+}
+
+#buttonchat2{
+    color:#212529;
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.2rem solid white;
+    margin-right: 0.2rem;
 }
 
 #textheaderchat{
