@@ -88,8 +88,8 @@ function ChatPage() {
             placeholder="Search chats..."
             value={searchTerm}
             onChange={handleSearchTermChange}
-            style={{ width: '70%', height: '3rem', marginBottom: '2.3rem' }}
-          />
+            style={{ width: '70%', height: '3rem', marginBottom: '3rem' }}
+          /><p id="headerdots2">...</p>
           <ul>
             {messages.map((chat, index) => (
               <li
