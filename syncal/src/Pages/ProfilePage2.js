@@ -26,7 +26,7 @@ const ProfilePage2 = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)} id="leftprofile2">
 
-          <img src={require("./images/rafael.jpeg")} alt="profile" className="profile-img" />
+          <img src={require("./images/rafaelL.jpg")} alt="profile" className="profile-img" />
           <h2 id="jdname">Rafael Leão</h2>
           {isHovered && (
             <img id="configbutp" src={require("./images/settings-icon-13.png")} ></img>

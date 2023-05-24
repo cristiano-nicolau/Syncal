@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { set } from 'react-hook-form';
 import '../css/Chatcss.css';
 import MessageModal from './ModalPerson';
+import ryanImage from '../images/ryan.jpg';
+import rafaelLeão from '../images/rafaelL.jpg';
+import julieImage from '../images/julie.jpg';
+import Rochinha from '../images/rochinha.jpg';
+import Ronaldo from '../images/Ronaldo.jpg';
 
 function ChatPage() {
   const [message, setMessage] = useState('');
@@ -9,32 +14,31 @@ function ChatPage() {
     [
       { sender: 'IHC', text: "Group have been created" },
       { sender: 'Joaquim', text: 'Como está a correr o projeto?' },
-      { sender: 'João Dias', text: 'Para já bem. Feito por hoje, amanhã há mais ',profile:'/JoãoDias'},
+      { sender: 'João Dias', text: 'Para já bem. Feito por hoje, amanhã há mais ', profile: '/JoãoDias', photo: ryanImage },
       { sender: 'Joaquim', text: 'Ok, ainda bem.' },
     ],
-    [ 
+    [
       { sender: 'CD', text: "Group have been created" },
       { sender: 'Luís', text: 'Vamos chumbar assim' },
-      { sender: 'João Dias', text: 'Tá mais que visto',profile:'/JoãoDias'  },
+      { sender: 'João Dias', text: 'Tá mais que visto', profile: '/JoãoDias', photo: ryanImage },
       { sender: 'Zé', text: 'Nada está perdido, ainda há esperança.' },
     ],
     [
       { sender: 'Futebolada', text: "Group have been created" },
-      { sender: 'Rochinha', text: '17:30 no campo para jogar malta.' },
-      { sender: 'João Dias', text: 'Ok, lá estarei.', profile:'/JoãoDias'},
-      { sender: 'Rochinha', text: 'Ok, até logo.'},
-      { sender: 'Ronaldo', text: 'Vou chegar atrasado, não me esperem.' },
-      { sender: 'Rafael Leão', text: 'Ok, sem problema.', profile:'/RafaelLeão' },
+      { sender: 'Rochinha', text: '17:30 no campo para jogar malta.', photo: Rochinha },
+      { sender: 'João Dias', text: 'Ok, lá estarei.', profile: '/JoãoDias', photo: ryanImage },
+      { sender: 'Ronaldo', text: 'Vou chegar atrasado, não me esperem.', photo: Ronaldo },
+      { sender: 'Rafael Leão', text: 'Ok, sem problema.', profile: '/RafaelLeão', photo: rafaelLeão },
 
     ],
     [
       { sender: 'Festa de Aniversário', text: "Group have been created" },
       { sender: 'Eduardo', text: 'Vai haver festa de aniversário no dia 15 de Junho.' },
-      { sender: 'João Dias', text: 'Só vou se houver bolo eheh', profile:'/JoãoDias'},
-      { sender: 'Eduardo', text: 'Claro que vai haver bolo, não te preocupes.'},
-      { sender: 'Eduardo', text: 'Vai ser no meu quintal, por isso não se preocupem com o espaço.'},
-      { sender: 'Marta', text: 'Ok, lá estarei.'},
-      { sender: 'Marta', text: 'Este João sempre o mesmo ahahah' },
+      { sender: 'João Dias', text: 'Só vou se houver bolo eheh', profile: '/JoãoDias', photo: ryanImage },
+      { sender: 'Eduardo', text: 'Claro que vai haver bolo, não te preocupes.' },
+      { sender: 'Marta', text: 'Ok, lá estarei.', photo: julieImage },
+      { sender: 'Eduardo', text: 'Vai ser no meu quintal, por isso não se preocupem com o espaço.' },
+
     ],
   ]);
   const [selectedChat, setSelectedChat] = useState(0);
@@ -53,7 +57,8 @@ function ChatPage() {
     if (message.trim() !== '') {
       const newMessage = {
         sender: 'João Dias',
-        profile:'/JoãoDias',
+        profile: '/JoãoDias',
+        photo: ryanImage,
         text: message.trim(),
       };
       const updatedMessages = [...messages];
@@ -86,24 +91,30 @@ function ChatPage() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSender, setSelectedSender] = useState(null);
-  const [selectedText, setSelectedText] = useState(null);
   const [selectedProfile, setSelectedProfile] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-  const handleSenderHover = (sender,event) => {
-    setSelectedSender(sender);
-    setIsModalOpen(true);
+  const handleSenderHover = (sender, photo, profile, event) => {
+    if (sender !== 'IHC' && sender !== 'CD' && sender !== 'Futebolada' && sender !== 'Festa de Aniversário') {
+      setSelectedSender(sender);
+      setSelectedProfile(profile);
+      setSelectedPhoto(photo);
+
+      setIsModalOpen(true);
+    
 
     const rect = event.currentTarget.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
 
-    const top = rect.top + scrollTop -100;
-    const left = rect.left + scrollLeft +200;
+    const top = rect.top + scrollTop - 100;
+    const left = rect.left + scrollLeft + 200;
 
 
 
     setModalPosition({ top, left });
+    }
 
 
   };
@@ -113,6 +124,8 @@ function ChatPage() {
     setIsModalOpen(false);
     setSelectedSender(null);
   };
+
+
 
   const handleViewProfile = () => {
     if (selectedProfile) {
@@ -165,8 +178,8 @@ function ChatPage() {
                   {filteredMessages.map((msg, index) => (
                     <div className="message" key={index}>
                       <div className={`message-sender ${msg.sender === 'You' ? 'self' : ''}`} style={{ textAlign: 'right' }}
-                        onMouseEnter={(e) => handleSenderHover(msg.sender, e)}
-                        onClick={(e) => handleSenderHover(msg.sender, e)}>
+                        onMouseEnter={(e) => handleSenderHover(msg.sender, msg.photo, msg.profile, e)}
+                        onClick={(e) => handleSenderHover(msg.sender, msg.photo, msg.profile, e)}>
                         {msg.sender}
                       </div>
                       <div className="message-text">{msg.text}</div>
@@ -195,8 +208,8 @@ function ChatPage() {
         </div>
       </div>
       {isModalOpen && (
-          <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender}  position={modalPosition} handleViewProfile={handleViewProfile} />
-        )}
+        <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender} position={modalPosition} handleViewProfile={handleViewProfile} photo={selectedPhoto} />
+      )}
     </>
 
   );
