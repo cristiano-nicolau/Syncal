@@ -16,6 +16,22 @@ const ProfilePage2 = () => {
 
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
+  const [isFriend, setIsFriend] = useState(false);
+  const [isModalFriendOpen, setIsModalFriendOpen] = useState(false);
+
+  const handleAddFriend = () => {
+    setIsFriend((prevIsFriend) => !prevIsFriend);
+
+    if (!isFriend) {
+      setIsModalFriendOpen(true);
+    } else {
+      setIsModalFriendOpen(false);
+    };
+  };
+
+  const handleCloseFriendModal = () => {
+    setIsModalFriendOpen(false);
+  };
 
   return (
     <>
@@ -39,6 +55,11 @@ const ProfilePage2 = () => {
           {isHovered2 && (
             <img id="configbutp" src={require("./images/settings-icon-13.png")} ></img>
           )}
+
+          <button onClick={handleAddFriend} id="add-friend-button">
+            {isFriend ? 'Friend Requested' : 'Add Friend +'}
+          </button>
+
           <h2 id="profileh2">Profile Page</h2>
 
           <div className="profile-details">
@@ -65,6 +86,16 @@ const ProfilePage2 = () => {
           </div>
         </div>
       </div>
+
+      {isModalFriendOpen && (
+        <div id="modaladdfriend" className={`add-friend-modal ${isModalFriendOpen ? 'open' : ''}`}>
+          <div className="add-friend-modal-content">
+            <h3>Wait for {user.name} to accept.</h3>
+            <button id="closefriendmodal" onClick={handleCloseFriendModal}>Close</button>
+          </div>
+        </div>
+      )
+      }
     </>
   );
 };

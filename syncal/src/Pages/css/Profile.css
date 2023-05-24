@@ -148,3 +148,61 @@
     flex-direction: column;
 
 }
+
+#add-friend-button{
+    border-radius: 1rem;
+    border: 0.2rem solid #212529;
+    background-color:#212529;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+    height:3rem ;
+    width: 12rem;
+    margin-top: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+    top:8rem;
+    right:42%;
+    position: fixed;
+
+}
+
+#modaladdfriend{
+    background-color:#212529;
+    color: #fff;
+    position: fixed;
+    bottom: 4rem;
+    right: 2rem;
+    border-radius: 1rem;
+    border: 0.2rem solid #212529;
+    height: 6rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+}
+
+.add-friend-modal-content{
+    height: 90%;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+
+#closefriendmodal{
+    background-color:white;
+    color: #212529;
+    margin:auto;
+    border-radius: 1rem;
+    border: 0.2rem solid #212529;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+    height:2.5rem ;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
