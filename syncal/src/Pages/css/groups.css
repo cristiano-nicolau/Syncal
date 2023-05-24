@@ -70,7 +70,7 @@
  }
 
  #imggroups {
-  float: left;
+   float: left;
    width: 10%;
    height: 10%;
    border-radius: 40%;
@@ -91,4 +91,9 @@
 
  #chatform {
    margin-left: 3vw;
+ }
+
+ #navbarimg {
+   width: 1vw;
+   height: 2.5vh;
  }
