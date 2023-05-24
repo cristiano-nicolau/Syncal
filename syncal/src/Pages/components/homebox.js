@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Schedule from './schedule';
@@ -7,6 +7,9 @@ import PopupButton from './buttons';
 import '../css/homebox.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import ReactSwitch from 'react-switch';
+import Video1 from '../videos/video1.mp4';
+import Video2 from '../videos/video2.mp4';
+import { useEffect } from 'react';
 
 
 function Homebox() {
@@ -38,15 +41,15 @@ function Homebox() {
 
     const handleChange1 = val1 => {
         setChecked1(val1)
-      }
+    }
 
-      const handleChange2 = val2 => {
+    const handleChange2 = val2 => {
         setChecked2(val2)
-      }
+    }
 
-      const handleChange3 = val3 => {
+    const handleChange3 = val3 => {
         setChecked3(val3)
-      }
+    }
 
 
 
@@ -60,9 +63,59 @@ function Homebox() {
 
 
 
+
+    const videos = [
+        {
+            src: Video1,
+            type: 'video/mp4'
+        },
+        {
+            src: Video2,
+            type: 'video/mp4'
+        },
+    ];
+
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const videoElement = videoRef.current;
+
+        if (!videoElement) {
+            return;
+        }
+
+        const handleVideoEnded = () => {
+            setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+        };
+
+        videoElement.addEventListener('ended', handleVideoEnded);
+
+        return () => {
+            videoElement.removeEventListener('ended', handleVideoEnded);
+        };
+    }, [videos.length]);
+
+    useEffect(() => {
+        const videoElement = videoRef.current;
+
+        if (!videoElement) {
+            return;
+        }
+
+        videoElement.currentTime = 0;
+        console.log(videoRef.current);
+        videoElement.load();
+        videoElement.play().catch((error) => console.log(error));
+    }, [currentVideoIndex]);
+
+    if (videos.length === 0) {
+        return <div>No videos available.</div>;
+    }
+
     return (
         <>
-            <div id='homebox'>
+            <div id='homebox' style={{ display: 'inline-block', float: 'left' }}>
                 <h1>
                     Welcome João Dias,
                 </h1>
@@ -186,64 +239,7 @@ function Homebox() {
                 </h2>
                 <div id='schedbut'>
 
-                    <h5>Day 01-07</h5>
-                    <>
-                        <button onClick={() => handleShow(7)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Ferias com a malta</button>
-
-                        <Modal show={selectModal === 7} onHide={handleClose} size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered>
-                            <Modal.Header>
-                                <Modal.Title>Ferias com a malta</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Ferias em espanha. Nao esquecer de pagar a casa ao Paulo. Pedir guito aos pais que a vida nao tá life.</Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </>
-                    <h5>Day 12</h5>
-                    <h6>From 16:00 to 15:00</h6>
-                    <>
-                        <button onClick={() => handleShow(8)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Reuniao para estagio</button>
-
-                        <Modal show={selectModal === 8} onHide={handleClose} size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered>
-                            <Modal.Header>
-                                <Modal.Title>Reuniao para estagio</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Fé em deus que a vida nao tá life.</Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </>
-                    <h5>Day 28</h5>
-                    <>
-                        <button onClick={() => handleShow(9)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Festa de Anos</button>
-
-                        <Modal show={selectModal === 9} onHide={handleClose} size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered>
-                            <Modal.Header>
-                                <Modal.Title>
-                                    Festa de Anos do Pedro
-                                </Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Bubedeira garantida. Da-lhe Da-lhe</Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-                    </>
-                    <h5>Day 31</h5>
+                    <h5>Day 2</h5>
                     <h6>From 11:00 to 12:00 </h6>
                     <>
                         <button onClick={() => handleShow(10)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Consulta</button>
@@ -263,6 +259,63 @@ function Homebox() {
                                 </Button>
                             </Modal.Footer>
                         </Modal>
+                        <h5>Day 04-08</h5>
+                        <>
+                            <button onClick={() => handleShow(7)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Ferias com a malta</button>
+
+                            <Modal show={selectModal === 7} onHide={handleClose} size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered>
+                                <Modal.Header>
+                                    <Modal.Title>Ferias com a malta</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Ferias em espanha. Nao esquecer de pagar a casa ao Paulo. Pedir guito aos pais que a vida nao tá life.</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+                        </>
+                        <h5>Day 12</h5>
+                        <h6>From 16:00 to 15:00</h6>
+                        <>
+                            <button onClick={() => handleShow(8)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Reuniao para estagio</button>
+
+                            <Modal show={selectModal === 8} onHide={handleClose} size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered>
+                                <Modal.Header>
+                                    <Modal.Title>Reuniao para estagio</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Fé em deus que a vida nao tá life.</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+                        </>
+                        <h5>Day 28</h5>
+                        <>
+                            <button onClick={() => handleShow(9)} type="button" class="btn btn-secondary btn-lg btn-block mb-3">Festa de Anos</button>
+
+                            <Modal show={selectModal === 9} onHide={handleClose} size="lg"
+                                aria-labelledby="contained-modal-title-vcenter"
+                                centered>
+                                <Modal.Header>
+                                    <Modal.Title>
+                                        Festa de Anos do Pedro
+                                    </Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Bubedeira garantida. Da-lhe Da-lhe</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Close
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
+                        </>
                     </>
                 </div>
             </div>
@@ -276,18 +329,18 @@ function Homebox() {
                                 <span style={{ margin: '5rem 0 0 0', display: 'block' }} id="spanssettings">
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
-                                    <ReactSwitch
-                                        checked={checked1}
-                                        onChange={handleChange1}
+                                        <ReactSwitch
+                                            checked={checked1}
+                                            onChange={handleChange1}
                                         />
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }} >
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-settings" htmlFor='checkbox' id="labelsettings">
-                                    <ReactSwitch
-                                        checked={checked2}
-                                        onChange={handleChange2}
+                                        <ReactSwitch
+                                            checked={checked2}
+                                            onChange={handleChange2}
                                         />
                                     </label>
                                 </span>
@@ -295,8 +348,8 @@ function Homebox() {
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
-                                        checked={checked3}
-                                        onChange={handleChange3}
+                                            checked={checked3}
+                                            onChange={handleChange3}
                                         />
                                     </label>
                                 </span>
@@ -309,6 +362,15 @@ function Homebox() {
                     </div>
                 </div>
             )}
+
+            <div id="pubcontainer" style={{ display: 'inline-block', float: 'right' }}>
+                <div id="addcontainer">
+                    <video autoPlay={true} muted ref={videoRef}>
+                        <source src={videos[currentVideoIndex].src} type={videos[currentVideoIndex].type} />
+                    </video>
+                </div>
+
+            </div>
 
         </>
 
