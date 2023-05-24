@@ -9,7 +9,7 @@ const ProfilePage = () => {
     lastname: 'Dias',
     email: 'joao.dias@example.com',
     country: 'Portugal',
-    city: 'Alcácer do Sal',
+    city: 'Aveiro',
 
     // Add more user details as needed
   };

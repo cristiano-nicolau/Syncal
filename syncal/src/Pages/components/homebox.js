@@ -132,11 +132,11 @@ function Homebox() {
                         </Dropdown.Menu>
                     </Dropdown>
                     <a href="/calendar">
-                        <button href="/calendar" type="button" class="btn btn-outline-secondary">My schedules</button>
+                        <button href="/calendar" type="button"  id="buttonhomebox" class="btn btn-outline-secondary">My schedules</button>
                     </a>
-                    <button onClick={openModal} class="btn btn-outline-secondary">Sharing Options</button>
+                    <button onClick={openModal} id="buttonhomebox" class="btn btn-outline-secondary">Sharing Options</button>
                     <a href="/chat">
-                        <button type="button" href='/chat' class="btn btn-outline-secondary">Group chat</button>
+                        <button type="button"  id="buttonhomebox"href='/chat' class="btn btn-outline-secondary">Group chat</button>
                     </a>
                 </div>
                 <h2>

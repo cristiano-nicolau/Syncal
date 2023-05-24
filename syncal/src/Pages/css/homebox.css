@@ -122,47 +122,47 @@ div.nav-item.dropdown {
 
 }
 
-#savesettingsbutton{
+#savesettingsbutton {
     border-radius: 1rem;
     border: 0.2rem solid #212529;
-    background-color:#212529;
+    background-color: #212529;
     color: #fff;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: capitalize;
     transition: 0.3s ease-in-out;
-    height:5rem ;
+    height: 5rem;
     width: 13rem;
     margin-top: 1rem;
     display: inline-block;
     cursor: pointer;
     justify-content: center;
-    bottom:2rem;
+    bottom: 2rem;
     right: 4rem;
     position: fixed;
 }
 
-#spanssettings{
+#spanssettings {
     width: 100%;
 }
 
 
-#pubcontainer{
+#pubcontainer {
     width: 25%;
     height: 100vh !important;
     display: flex;
 }
 
-#pubh2{
+#pubh2 {
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 2rem;
     font-size: 3rem;
 }
 
-#addcontainer{
-    width:80%;
+#addcontainer {
+    width: 80%;
     max-width: 80%;
     height: 80%;
     margin-top: 5rem;
@@ -179,4 +179,60 @@ video {
     align-items: center;
     justify-content: center;
     margin-left: 10%;
+}
+
+
+
+
+#buttonhomebox {
+    font-weight: 600;
+    font-size: 1rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #212529;
+    padding: 10px 30px;
+    border: solid #212529 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 3rem;
+    transition: 567ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#buttonhomebox:hover {
+    transition: 567ms;
+    padding: 0.5rem 2.6rem;
+    transform: translateY(-0px);
+    background-color: #fff;
+    color: #212529;
+    border: solid 2px #212529;
+
+}
+
+#dropdown-basic {
+    padding: 10px 30px;
+    height: 4rem;
+    border-radius: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 3rem;
+    transition: 567ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+#dropdown-basic:hover {
+    transition: 567ms;
+    padding: 0.5rem 2.6rem;
+    transform: translateY(-0px);
+    background-color: #fff;
+    color: #28a745;
+    border: solid 2px #28a745;
+
 }
