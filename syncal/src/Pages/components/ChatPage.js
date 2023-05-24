@@ -90,10 +90,8 @@ function ChatPage() {
   const [selectedProfile, setSelectedProfile] = useState(null);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-  const handleSenderHover = (sender,text,profile,event) => {
+  const handleSenderHover = (sender,event) => {
     setSelectedSender(sender);
-    setSelectedText(text);
-    setSelectedProfile(profile);
     setIsModalOpen(true);
 
     const rect = event.currentTarget.getBoundingClientRect();
@@ -114,6 +112,15 @@ function ChatPage() {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedSender(null);
+  };
+
+  const handleViewProfile = () => {
+    if (selectedProfile) {
+      // Redirect to the profile URL
+      window.location.href = selectedProfile;
+    } else {
+      console.log('No profile URL available for:', selectedSender);
+    }
   };
 
 
@@ -188,7 +195,7 @@ function ChatPage() {
         </div>
       </div>
       {isModalOpen && (
-          <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender} text={selectedText} profile={selectedProfile} position={modalPosition} />
+          <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender}  position={modalPosition} handleViewProfile={handleViewProfile} />
         )}
     </>
 

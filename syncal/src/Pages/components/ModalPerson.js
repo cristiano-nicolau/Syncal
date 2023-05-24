@@ -2,23 +2,11 @@ import React, { useState } from 'react';
 import '../css/Chatcss.css';
 import PropTypes from 'prop-types';
 
-function MessageModal({ isOpen, onClose, sender,text,profile,position }) {
+function MessageModal({ isOpen, onClose, sender,position,handleViewProfile }) {
   if (!isOpen) {
     return null;
   }
 
-
-
-  const handleViewProfile = () => {
-    console.log('View profile clicked:', sender);
-    if (sender.profile) {
-      // Redirect to the profile URL
-      window.location.href = profile;
-    } else {
-      console.log('No profile URL available for:', sender);
-      console.log('No profile URL available for:', text);
-    }
-  };
 
   return (
     <div className="message-modal" id="message-modal" >
