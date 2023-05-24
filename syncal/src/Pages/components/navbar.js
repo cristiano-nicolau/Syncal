@@ -81,7 +81,7 @@ function Navegationbar(props) {
                     <Button variant="outline-success">Search</Button>
                 </Form>
                 <NavDropdown title="João Dias" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="../profile">Profile</NavDropdown.Item>
+                    <NavDropdown.Item href="../JoãoDias">Profile</NavDropdown.Item>
                     <NavDropdown.Item onClick={openModal}>
                         Settings
                     </NavDropdown.Item>

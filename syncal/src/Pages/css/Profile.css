@@ -36,6 +36,16 @@
     align-items: center;
 }
 
+#leftprofile2{
+    width: 45%;
+    height: 94%;
+    float: left;
+    background-image: url("../images/san-siro-stadium-24762387.jpg");
+    background-size: cover;
+    position: fixed;
+    align-items: center;
+}
+
 #rightprofile {
     width: 55%;
     height: 92.2vh;

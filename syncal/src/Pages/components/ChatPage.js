@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { set } from 'react-hook-form';
 import '../css/Chatcss.css';
 import MessageModal from './ModalPerson';
 
@@ -7,32 +8,32 @@ function ChatPage() {
   const [messages, setMessages] = useState([
     [
       { sender: 'IHC', text: "Group have been created" },
-      { sender: 'Joaquim', text: 'Como está a correr o projeto?', photo: '../images/img33.jpg' },
-      { sender: 'You', text: 'Para já bem. Feito por hoje, amanhã há mais ' },
+      { sender: 'Joaquim', text: 'Como está a correr o projeto?' },
+      { sender: 'João Dias', text: 'Para já bem. Feito por hoje, amanhã há mais ',profile:'/JoãoDias'},
       { sender: 'Joaquim', text: 'Ok, ainda bem.' },
     ],
-    [
+    [ 
       { sender: 'CD', text: "Group have been created" },
       { sender: 'Luís', text: 'Vamos chumbar assim' },
-      { sender: 'You', text: 'Tá mais que visto', },
+      { sender: 'João Dias', text: 'Tá mais que visto',profile:'/JoãoDias'  },
       { sender: 'Zé', text: 'Nada está perdido, ainda há esperança.' },
     ],
     [
       { sender: 'Futebolada', text: "Group have been created" },
       { sender: 'Rochinha', text: '17:30 no campo para jogar malta.' },
-      { sender: 'You', text: 'Ok, lá estarei.' },
-      { sender: 'Rochinha', text: 'Ok, até logo.' },
+      { sender: 'João Dias', text: 'Ok, lá estarei.', profile:'/JoãoDias'},
+      { sender: 'Rochinha', text: 'Ok, até logo.'},
       { sender: 'Ronaldo', text: 'Vou chegar atrasado, não me esperem.' },
-      { sender: 'Rafael Leão', text: 'Ok, sem problema.' },
+      { sender: 'Rafael Leão', text: 'Ok, sem problema.', profile:'/RafaelLeão' },
 
     ],
     [
       { sender: 'Festa de Aniversário', text: "Group have been created" },
       { sender: 'Eduardo', text: 'Vai haver festa de aniversário no dia 15 de Junho.' },
-      { sender: 'You', text: 'Só vou se houver bolo eheh' },
-      { sender: 'Eduardo', text: 'Claro que vai haver bolo, não te preocupes.' },
-      { sender: 'Eduardo', text: 'Vai ser no meu quintal, por isso não se preocupem com o espaço.' },
-      { sender: 'Marta', text: 'Ok, lá estarei.' },
+      { sender: 'João Dias', text: 'Só vou se houver bolo eheh', profile:'/JoãoDias'},
+      { sender: 'Eduardo', text: 'Claro que vai haver bolo, não te preocupes.'},
+      { sender: 'Eduardo', text: 'Vai ser no meu quintal, por isso não se preocupem com o espaço.'},
+      { sender: 'Marta', text: 'Ok, lá estarei.'},
       { sender: 'Marta', text: 'Este João sempre o mesmo ahahah' },
     ],
   ]);
@@ -51,9 +52,9 @@ function ChatPage() {
   const handleSendMessage = () => {
     if (message.trim() !== '') {
       const newMessage = {
-        sender: 'You',
+        sender: 'João Dias',
+        profile:'/JoãoDias',
         text: message.trim(),
-        photo: 'user.jpg',
       };
       const updatedMessages = [...messages];
       updatedMessages[selectedChat] = [...updatedMessages[selectedChat], newMessage];
@@ -85,20 +86,28 @@ function ChatPage() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedSender, setSelectedSender] = useState(null);
+  const [selectedText, setSelectedText] = useState(null);
+  const [selectedProfile, setSelectedProfile] = useState(null);
   const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
-  const handleSenderHover = (sender, event) => {
+  const handleSenderHover = (sender,text,profile,event) => {
     setSelectedSender(sender);
+    setSelectedText(text);
+    setSelectedProfile(profile);
     setIsModalOpen(true);
 
     const rect = event.currentTarget.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
 
-    const top = rect.top + scrollTop -200;
+    const top = rect.top + scrollTop -100;
     const left = rect.left + scrollLeft +200;
 
+
+
     setModalPosition({ top, left });
+
+
   };
 
 
@@ -179,7 +188,7 @@ function ChatPage() {
         </div>
       </div>
       {isModalOpen && (
-          <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender} position={modalPosition} />
+          <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender} text={selectedText} profile={selectedProfile} position={modalPosition} />
         )}
     </>
 

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import './css/Profile.css';
 import Navegationbar from './components/navbar';
 
-const ProfilePage = () => {
+const ProfilePage2 = () => {
   // Replace with your logic to fetch user data
   const user = {
-    name: 'João',
-    lastname: 'Dias',
-    email: 'joao.dias@example.com',
+    name: 'Rafael',
+    lastname: 'Leão',
+    email: 'RafaelLeão@example.com',
     country: 'Portugal',
-    city: 'Alcácer do Sal',
+    city: 'Almada',
 
     // Add more user details as needed
   };
@@ -24,10 +24,10 @@ const ProfilePage = () => {
 
         <div className={`profile-container ${isHovered ? 'hovered' : ''}`}
           onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)} id="leftprofile">
+          onMouseLeave={() => setIsHovered(false)} id="leftprofile2">
 
-          <img src={require("./images/ryan.jpg")} alt="profile" className="profile-img" />
-          <h2 id="jdname">João Dias</h2>
+          <img src={require("./images/rafael.jpeg")} alt="profile" className="profile-img" />
+          <h2 id="jdname">Rafael Leão</h2>
           {isHovered && (
             <img id="configbutp" src={require("./images/settings-icon-13.png")} ></img>
           )}
@@ -69,4 +69,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default ProfilePage2;
