@@ -39,8 +39,8 @@ function NotificationBell() {
                 <img
                     src={require("../images/bell-icon.png")}
                     alt="Notification Bell"
-                    width="20"
-                    height="20"
+                    width="25"
+                    height="25"
                 />
                 {notifications.length > 0 && (
                     <span className="notification-badge">{notifications.length}</span>

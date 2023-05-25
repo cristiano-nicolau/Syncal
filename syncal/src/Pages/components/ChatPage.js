@@ -13,9 +13,9 @@ function ChatPage() {
   const [messages, setMessages] = useState([
     [
       { sender: 'IHC', text: "Group have been created" },
-      { sender: 'Joaquim', text: 'Como está a correr o projeto?' },
+      { sender: 'Alberto', text: 'Como está a correr o projeto?' },
       { sender: 'João Dias', text: 'Para já bem. Feito por hoje, amanhã há mais ', profile: '/JoãoDias', photo: ryanImage },
-      { sender: 'Joaquim', text: 'Ok, ainda bem.' },
+      { sender: 'Alberto', text: 'Ok, ainda bem.' },
     ],
     [
       { sender: 'CD', text: "Group have been created" },
@@ -41,10 +41,10 @@ function ChatPage() {
     ],
 
     [
-      { sender: 'Rafael Leão', text: 'Olá, tudo bem?', profile: '/RafaelLeão', photo: rafaelLeão },
+      { sender: 'Ronaldo', text: 'Olá, tudo bem?', photo: Ronaldo },
       { sender: 'João Dias', text: 'Olá, tudo e contigo?', profile: '/JoãoDias', photo: ryanImage },
-      { sender: 'Rafael Leão', text: 'Tudo bem, obrigado.', profile: '/RafaelLeão', photo: rafaelLeão },
-      { sender: 'João Dias', text: 'Ainda bem.', profile: '/JoãoDias', photo: ryanImage },
+      { sender: 'Ronaldo', text: 'Vou te adicionar á futebolada', photo: Ronaldo},
+      { sender: 'João Dias', text: 'ok chefe', profile: '/JoãoDias', photo: ryanImage },
     ],
   ]);
   const [selectedChat, setSelectedChat] = useState(0);
@@ -115,7 +115,7 @@ function ChatPage() {
       const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
 
       const top = rect.top + scrollTop - 100;
-      const left = rect.left + scrollLeft + 200;
+      const left = rect.left + scrollLeft + 175;
 
 
 
