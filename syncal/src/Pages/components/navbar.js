@@ -4,9 +4,12 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import React, { useEffect, useState } from "react";
 import ReactSwitch from 'react-switch';
 import { toHaveFormValues } from '@testing-library/jest-dom/dist/matchers';
+import NotificationBell from './NotificationBEll';
 
 function Navegationbar(props) {
     const [time, setTime] = useState(new Date())
@@ -35,15 +38,15 @@ function Navegationbar(props) {
 
     const handleChange1 = val1 => {
         setChecked1(val1)
-      }
+    }
 
-      const handleChange2 = val2 => {
+    const handleChange2 = val2 => {
         setChecked2(val2)
-      }
+    }
 
-      const handleChange3 = val3 => {
+    const handleChange3 = val3 => {
         setChecked3(val3)
-      }
+    }
 
 
 
@@ -55,11 +58,12 @@ function Navegationbar(props) {
     };
 
 
+
     return (
         <Navbar bg="dark" expand="lg">
             <a href="/home">
-            <img src={require("../images/syncalwhite.png")} id="navbarimg" ></img>
-            <Navbar.Brand  style ={{margin:"0 0 0 1rem "}}>Syncal</Navbar.Brand>
+                <img src={require("../images/syncalwhite.png")} id="navbarimg" ></img>
+                <Navbar.Brand style={{ margin: "0 0 0 1rem " }}>Syncal</Navbar.Brand>
             </a>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
@@ -80,7 +84,10 @@ function Navegationbar(props) {
                     />
                     <Button variant="outline-success">Search</Button>
                 </Form>
-                <NavDropdown title="João Dias" id="navbarScrollingDropdown">
+                <div className="notification-bell">
+                    <NotificationBell />
+                </div>
+                <NavDropdown title="João Dias" id="navbarScrollingDropdown" style={{width:'15%',textAlign:'center'}}>
                     <NavDropdown.Item href="../JoãoDias">Profile</NavDropdown.Item>
                     <NavDropdown.Item onClick={openModal}>
                         Settings
@@ -101,18 +108,18 @@ function Navegationbar(props) {
                                 <span style={{ margin: '5rem 0 0 0', display: 'block' }} id="spanssettings">
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
-                                    <ReactSwitch
-                                        checked={checked1}
-                                        onChange={handleChange1}
+                                        <ReactSwitch
+                                            checked={checked1}
+                                            onChange={handleChange1}
                                         />
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }} >
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-settings" htmlFor='checkbox' id="labelsettings">
-                                    <ReactSwitch
-                                        checked={checked2}
-                                        onChange={handleChange2}
+                                        <ReactSwitch
+                                            checked={checked2}
+                                            onChange={handleChange2}
                                         />
                                     </label>
                                 </span>
@@ -120,8 +127,8 @@ function Navegationbar(props) {
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
-                                        checked={checked3}
-                                        onChange={handleChange3}
+                                            checked={checked3}
+                                            onChange={handleChange3}
                                         />
                                     </label>
                                 </span>
@@ -136,7 +143,7 @@ function Navegationbar(props) {
             )}
         </Navbar>
 
-        
+
     );
 }
 
