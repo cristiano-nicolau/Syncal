@@ -1,9 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navegationbar from './components/navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+
+
+
 function Newcalendar() {
+
+    const [showModalCalendar, setShowModalCalendar] = useState(false);
+
+    // Function to handle the register button click
+    const handleRegisterClickModle = () => {
+        setShowModalCalendar(true);
+
+        setTimeout(() => {
+            setShowModalCalendar(false);
+            window.location.href="/home";
+        }, 2000);
+    };
+
     return (
         <div>
             <Navegationbar></Navegationbar>
@@ -23,7 +39,7 @@ function Newcalendar() {
                                 <Form.Label>Add members</Form.Label>
                                 <Form.Control type="text" placeholder="" />
                             </Form.Group>
-                            <Button variant="primary" id='memberbut' type="submit">
+                            <Button variant="primary" id='memberbut'>
                                 Add member
                             </Button>
                         </div>
@@ -35,14 +51,22 @@ function Newcalendar() {
                             <Form.Check type="checkbox" label="Make this a public group" />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" >
-                            Submit
-                        </Button>
-
+                            <Button variant="primary" id="memberbut" onClick={handleRegisterClickModle} >
+                                Submit
+                            </Button>
                     </Form>
                 </div>
 
             </div>
+
+            {/* Modal */}
+            {showModalCalendar && (
+                <div id="modal2">
+                    <div id="modal-content">
+                        <h2>Calendar has been created successfully</h2>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

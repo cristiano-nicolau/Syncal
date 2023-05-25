@@ -44,7 +44,7 @@ const Intro = (props) => {
                         <h2 id="questionh2">Syncal</h2> 
                         <p id="textquestion">Syncal is a Web Aplication that gives users a calendar synchronizer where work groups, projects, friends can set dates to meet more easily. It also has the function of a personal agenda.
                         <br></br> Syncal was made by a group of students from the University of Aveiro, as a project for a class of their course of Software Engineering.
-                        <br></br> If you have any questions or suggestions, please contact us at: <a href="mailto">Syncal.Support@syncal.com</a>
+                        <br></br> If you have any questions or suggestions, please contact us at: <a href="#">Syncal.Support@syncal.com</a>
                         ​</p>
                         <button  id="savesettingsbutton" onClick={closeQuestionButtonModal}>Close</button>
                     </div>

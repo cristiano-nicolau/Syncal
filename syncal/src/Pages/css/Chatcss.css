@@ -9,9 +9,9 @@
 
 .chat-container {
     width: 75%;
-    height: 85%;    
+    height: 85%;
     margin: 4% 0 0 14%;
-    border:none;
+    border: none;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 0;
 }
@@ -25,9 +25,9 @@
     width: 30%;
     height: 100%;
     background-color: #212529;
-    color:white;
+    color: white;
     font-size: 1.2rem;
-    border:none;
+    border: none;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 0;
     border-right: 0.2rem solid white;
@@ -46,7 +46,7 @@
     padding: 10px;
     cursor: pointer;
     height: 5rem;
-    border:3px white;
+    border: 3px white;
 }
 
 .chat-selector li:hover {
@@ -56,7 +56,7 @@
 
 .chat-selector li.selected {
     background-color: #cfcfcf;
-    color:black;
+    color: black;
 }
 
 .chat-selector img {
@@ -77,14 +77,14 @@
     overflow: hidden;
     position: relative;
     display: inline-block;
-    border:none;
+    border: none;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius: 0;
 }
 
-#headerdots{
-    font-size:6rem;
-    color:white;
+#headerdots {
+    font-size: 6rem;
+    color: white;
     margin-bottom: 4rem;
     margin-right: 1rem;
 
@@ -100,7 +100,9 @@
     border-bottom: 1px solid #ccc;
     z-index: 1;
     background-color: #212529;
-    height: 6rem;;;
+    height: 6rem;
+    ;
+    ;
 }
 
 
@@ -115,11 +117,11 @@
 .message {
     margin-bottom: 10px;
     max-width: 100%;
-   align-items: center;
+    align-items: center;
 
 }
 
-.message-text{
+.message-text {
     float: right;
     margin-bottom: 0.6rem;
     font-size: 1.2rem;
@@ -129,7 +131,7 @@
     margin-left: 4rem;
 }
 
-.message-sender {   
+.message-sender {
     font-weight: bold;
     margin-bottom: 0.1rem;
     font-size: 1.3rem;
@@ -139,7 +141,7 @@
     flex-direction: column;
     margin-left: 5rem;
 }
- 
+
 
 
 
@@ -190,8 +192,8 @@
 }
 
 
-#buttonchat{
-    color:#212529;
+#buttonchat {
+    color: #212529;
     font-size: 1.5rem;
     background-color: white;
     border-radius: 1rem;
@@ -199,8 +201,8 @@
     margin-right: 0.5rem;
 }
 
-#buttonchat2{
-    color:#212529;
+#buttonchat2 {
+    color: #212529;
     font-size: 1.5rem;
     background-color: white;
     border-radius: 1rem;
@@ -208,24 +210,24 @@
     margin-right: 0.2rem;
 }
 
-#textheaderchat{
+#textheaderchat {
     color: white;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
-  
+
 }
 
-#textlichatchat{
+#textlichatchat {
     color: white;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     font-size: 2rem;
 }
 
-#headerdots2{
+#headerdots2 {
     display: inline-block;
-    font-size:3rem;
-    color:white;
+    font-size: 3rem;
+    color: white;
     margin-right: 1rem;
     margin-left: 4rem;
 
@@ -234,7 +236,7 @@
 
 
 
-#contentmodalperson{
+#contentmodalperson {
     height: 10rem;
     width: 15rem;
     align-items: center;
@@ -243,47 +245,47 @@
 }
 
 
-#imgperson{
+#imgperson {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
-    margin:auto;
-}   
+    margin: auto;
+}
 
 
 
-#closemodalperson{
-    height:25%;
-    color:white;
+#closemodalperson {
+    height: 25%;
+    color: white;
     border: white;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border:none;
+    border: none;
     border-radius: 1rem;
-    background-color:var(--background-questionbutton) ;
+    background-color: var(--background-questionbutton);
     width: 80%;
 }
 
-#viewprofileperson{
+#viewprofileperson {
     height: 25%;
-    color:white;
+    color: white;
     border: white;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border:none;
+    border: none;
     border-radius: 1rem;
-    background-color:var(--background-questionbutton) ;
+    background-color: var(--background-questionbutton);
     margin-bottom: 1rem;
     margin-top: 1rem;
     width: 80%;
 }
 
-#message-modal{
+#message-modal {
     border: none;
     width: 15rem;
     height: 15rem;
 }
 
-#personh3{
-    color:#212529;
+#personh3 {
+    color: #212529;
     width: 50%;
     font-size: 1.5rem;
     align-items: center;
@@ -291,6 +293,21 @@
     margin-top: 1rem;
 }
 
+#modal1 {
+    position: fixed;
+    background-color: #212529;
+    z-index: 500;
+    border: none;
+    border-radius: 3rem;
+    padding: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    width: 15rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 45%;
+    right: 45%;
+    left: 45%;
 
-
-
+}

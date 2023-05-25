@@ -38,7 +38,13 @@ function ChatPage() {
       { sender: 'Eduardo', text: 'Claro que vai haver bolo, não te preocupes.' },
       { sender: 'Marta', text: 'Ok, lá estarei.', photo: julieImage },
       { sender: 'Eduardo', text: 'Vai ser no meu quintal, por isso não se preocupem com o espaço.' },
+    ],
 
+    [
+      { sender: 'Rafael Leão', text: 'Olá, tudo bem?', profile: '/RafaelLeão', photo: rafaelLeão },
+      { sender: 'João Dias', text: 'Olá, tudo e contigo?', profile: '/JoãoDias', photo: ryanImage },
+      { sender: 'Rafael Leão', text: 'Tudo bem, obrigado.', profile: '/RafaelLeão', photo: rafaelLeão },
+      { sender: 'João Dias', text: 'Ainda bem.', profile: '/JoãoDias', photo: ryanImage },
     ],
   ]);
   const [selectedChat, setSelectedChat] = useState(0);
@@ -102,18 +108,18 @@ function ChatPage() {
       setSelectedPhoto(photo);
 
       setIsModalOpen(true);
-    
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
-
-    const top = rect.top + scrollTop - 100;
-    const left = rect.left + scrollLeft + 200;
 
 
+      const rect = event.currentTarget.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft;
 
-    setModalPosition({ top, left });
+      const top = rect.top + scrollTop - 100;
+      const left = rect.left + scrollLeft + 200;
+
+
+
+      setModalPosition({ top, left });
     }
 
 
@@ -135,6 +141,19 @@ function ChatPage() {
       console.log('No profile URL available for:', selectedSender);
     }
   };
+
+
+  const [showModal, setShowModal] = useState(false);
+
+    // Function to handle the register button click
+    const handleRegisterClickModle = () => {
+        setShowModal(true);
+
+        setTimeout(() => {
+            setShowModal(false);
+            window.location.href = "/calendar_groups"; // Replace with your target page URL
+        }, 1500);
+    };
 
 
 
@@ -199,9 +218,8 @@ function ChatPage() {
                 onKeyDown={handleKeyDown}
                 id="inputchat"
               />
-              <a href="/calendar_groups">
-                <button href='/calendar_groups' id="buttonchat">Calendar</button>
-              </a>
+                <button id="buttonchat" onClick={handleRegisterClickModle}>Calendar</button>
+
               <button onClick={handleSendMessage} id="buttonchat2">Send</button>
             </div>
           </div>
@@ -209,6 +227,15 @@ function ChatPage() {
       </div>
       {isModalOpen && (
         <MessageModal isOpen={isModalOpen} onClose={handleCloseModal} sender={selectedSender} position={modalPosition} handleViewProfile={handleViewProfile} photo={selectedPhoto} />
+      )}
+
+      {/* Modal */}
+      {showModal && (
+        <div id="modal1">
+          <div id="modal-content">
+            <h2>Syncronizing Calendars...</h2>
+          </div>
+        </div>
       )}
     </>
 

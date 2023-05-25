@@ -12,7 +12,21 @@ function NewEvent() {
         navigate(path);
     };
     const handleShow = () => setShow(true);
+
+    const [showModalCalendar, setShowModalCalendar] = useState(false);
+
+    // Function to handle the register button click
+    const handleRegisterClickModle = () => {
+        setShowModalCalendar(true);
+
+        setTimeout(() => {
+            setShowModalCalendar(false);
+            window.location.href="/home";
+        }, 2000);
+    };
     return (
+
+
         <div>
             <Navegationbar></Navegationbar>
             <a href="/home">
@@ -39,28 +53,22 @@ function NewEvent() {
                             <textarea form="testformid" name="taname" id="taid" cols="35" wrap="soft" placeholder=''></textarea>
                         </Form.Group>
                         <>
-                            <Button variant="primary" onClick={handleShow}>
+                            <Button variant="primary" id="memberbut" onClick={handleRegisterClickModle}>
                                 Submit
                             </Button>
-                            <Modal show={show} onHide={handleClose} size="lg"
-                                aria-labelledby="contained-modal-title-vcenter"
-                                centered>
-                                <Modal.Header>
-                                    <Modal.Title>New event created</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>Congrats you did it! Well it was not that hard i guess... </Modal.Body>
-                                <Modal.Footer>
-
-                                    <Button variant="primary" onClick={handleClose}>
-                                        Home
-                                    </Button>
-                                </Modal.Footer>
-                            </Modal>
                         </>
                     </Form>
                 </div>
 
             </div>
+            {/* Modal */}
+            {showModalCalendar && (
+                <div id="modal2">
+                    <div id="modal-content">
+                        <h2>Event has been created successfully</h2>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

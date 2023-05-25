@@ -32,9 +32,33 @@ div#inlineform {
 }
 
 button#memberbut {
-    margin-top: 5.7% !important;
+    margin-top: 4% !important;
     margin-left: 3% !important;
     height: 10% !important;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 4rem;
+    color: #fff;
+    background-color: #212529;
+    padding: 10px 30px;
+    border: solid #212529 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 3rem;
+    transition: 567ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+button#memberbut:hover {
+    transition: 567ms;
+    padding: 0.5rem 2.6rem;
+    transform: translateY(-0px);
+    background-color: #fff;
+    color: #212529;
+    border: solid 2px #212529;
 }
 
 textarea#taid {
@@ -46,3 +70,24 @@ textarea#taid {
 #page{
     max-height: 100vh;
 }
+
+
+
+#modal2{
+    position: fixed;
+    background-color: #212529;
+    z-index: 500;
+    border: none;
+    border-radius: 2rem;
+    padding: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    width: 18rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   bottom: 2%;
+    right: 2%;
+
+}
+

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navegationbar from './components/navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import './css/form.css';
 function NewGroup() {
+
+    const [showModalCalendar, setShowModalCalendar] = useState(false);
+
+    const handleRegisterClickModle = () => {
+        setShowModalCalendar(true);
+
+        setTimeout(() => {
+            setShowModalCalendar(false);
+            window.location.href="/home";
+        }, 2000);
+    };
     return (
         <div>
             <Navegationbar></Navegationbar>
@@ -34,7 +45,7 @@ function NewGroup() {
                         <Form.Group className="mb-3" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Make this a public group" />
                         </Form.Group>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" id="memberbut" onClick={handleRegisterClickModle}>
                             Submit
                         </Button>
 
@@ -42,6 +53,14 @@ function NewGroup() {
                 </div>
 
             </div>
+            {/* Modal */}
+            {showModalCalendar && (
+                <div id="modal2">
+                    <div id="modal-content">
+                        <h2>Group has been created successfully</h2>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
