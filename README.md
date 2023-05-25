@@ -1,5 +1,3 @@
-calendar syncing between people for ihc made with Vasco and Cristiano
-
 <h1 align="center"> Syncal (Sync Calendar)</h1> <br>
 
 The final project of the Human-Computer Interaction course consists of a high-fidelity prototype of a universal syncronized calendar system.
