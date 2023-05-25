@@ -284,17 +284,24 @@ video {
     position: relative;
     margin-left: auto;
     cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
   }
   
   .notification-badge {
+    height: 1.2rem;
+    width: 1.2rem;
     position: absolute;
     top: -5px;
-    right: -5px;
+    right: -1rem;
     background-color: red;
     color: #fff;
     border-radius: 50%;
     padding: 4px;
-    font-size: 12px;
+    font-size: 0.8rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   
   .notification-list {
@@ -303,18 +310,61 @@ video {
     top: 30px;
     right: 0;
     background-color: #fff;
-    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     min-width: 200px;
   }
   
   .notification-list-item {
-    padding: 5px;
+    width: 100%;
+    margin-top: 0.5rem;
   }
   
   .notification-list-item:hover {
-    background-color: #f2f2f2;
+    background-color: #212529;
+    color:white;
+    width: 100%;
   }
 
+  #notification-popover{
+    width: 25rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+  }
+
+  .notification-list-item{
+    height: 5rem;
+  }
+
+
+
+
+  #gobackbutton2{
+    font-weight: 600;
+    font-size: 1rem;
+    height: 4rem;
+    width: 8rem;
+    color: #fff;
+    background-color: #212529;
+    padding: 10px 30px;
+    border: solid #212529 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 3rem;
+    transition: 567ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+#gobackbutton2:hover{
+    transition: 567ms;
+    padding: 0.5rem 2rem;
+    transform: translateY(-0px);
+    background-color: #fff;
+    color: #212529;
+    border: solid 2px #212529;
+
+}
   
