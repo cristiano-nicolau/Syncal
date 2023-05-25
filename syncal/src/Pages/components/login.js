@@ -26,7 +26,7 @@ const LoginLayout = (props) => {
 
         setTimeout(() => {
             setShowModal(false);
-            window.location.href = "/login#s2"; // Replace with your target page URL
+            window.location.href = "/#s2"; // Replace with your target page URL
         }, 1500);
         setActivePanel('login');
     };
