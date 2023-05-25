@@ -157,7 +157,7 @@ function Calendar() {
           <Col md={12}>
             <Button
               id="gobackbutton"
-              style={{ float: "right" }}
+              style={{ float: "right",height:'3rem' }}
               color="secondary"
               onClick={() => setModal(true)}
             >
