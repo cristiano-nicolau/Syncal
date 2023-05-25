@@ -38,9 +38,9 @@ function Calendar() {
 
 
   function handleDateClick(arg) {
-   
+
   }
- 
+
   function handleDateSelect(selectInfo) {
     // console.log(selectInfo.view.type);
     if (
@@ -57,7 +57,7 @@ function Calendar() {
       setModal(true);
     }
 
-    
+
   }
   function renderEventContent(eventInfo) {
     return (
@@ -138,7 +138,7 @@ function Calendar() {
   return (
     <div className="App">
       <a href="/home">
-        <button type="button" id="gobackbutton"class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
+        <button type="button" id="gobackbutton" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
       </a>
       <Container>
         <Row style={{ marginBottom: 20 }}>
@@ -151,23 +151,24 @@ function Calendar() {
           >
 
           </Col>
-          
+
         </Row>
         <Row>
           <Col md={12}>
             <Button
+              id="gobackbutton"
               style={{ float: "right" }}
               color="secondary"
               onClick={() => setModal(true)}
             >
-              Add schedule
+              Add Event
             </Button>
             <FullCalendar
               ref={calendarRef}
 
               plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-              
-        
+
+
               headerToolbar={{
                 left: "prev,today,next",
                 center: "title",
@@ -252,61 +253,61 @@ function Calendar() {
                   end: "2023-05-31T16:00:00"
                   // date: "2020-07-30"
                 },
-                { 
+                {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-05-31T17:00:00",
-                  end: "2023-05-31T19:30:00" 
+                  end: "2023-05-31T19:30:00"
                 },
-                {    
+                {
                   id: nanoid(),
                   title: "",
                   start: "2023-05-31T21:40:00",
                   end: "2023-05-31T23:30:00"
                 },
-                { 
+                {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-01T09:00:00",
-                  end: "2023-06-01T11:00:00" 
-                },                { 
+                  end: "2023-06-01T11:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-01T11:00:00",
-                  end: "2023-06-01T13:00:00" 
-                },                     { 
+                  end: "2023-06-01T13:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-03T08:00:00",
-                  end: "2023-06-03T19:00:00" 
-                },                { 
+                  end: "2023-06-03T19:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-01T14:00:00",
-                  end: "2023-06-01T16:00:00" 
-                },                { 
+                  end: "2023-06-01T16:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-01T16:00:00",
-                  end: "2023-06-01T17:00:00" 
-                },                { 
+                  end: "2023-06-01T17:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-01T18:30:00",
-                  end: "2023-06-01T21:00:00" 
-                },             { 
+                  end: "2023-06-01T21:00:00"
+                }, {
                   id: nanoid(),
-                  title: " ", 
+                  title: " ",
                   start: "2023-06-02T15:00:00",
-                  end: "2023-06-02T16:00:00" 
-                },             { 
+                  end: "2023-06-02T16:00:00"
+                }, {
                   id: nanoid(),
-                  title: "", 
+                  title: "",
                   start: "2023-06-02T17:30:00",
-                  end: "2023-06-01T21:00:00" 
-                }              
+                  end: "2023-06-01T21:00:00"
+                }
 
-              ]} 
+              ]}
               select={handleDateSelect}
               eventClick={handleEventClick}
 
@@ -369,24 +370,7 @@ function Calendar() {
         </FormGroup>
       </CustomModal>
 
-      <CustomModal
-        title={state.state === "resize" ? "Resize Event" : "Drop Event"}
-        isOpen={confirmModal}
-        toggle={() => {
-          state.checkInfo.revert();
-          setConfirmModal(false);
-        }}
-        onCancel={() => {
-          state.checkInfo.revert();
-          setConfirmModal(false);
-        }}
-        cancelText="Cancel"
-        onSubmit={() => setConfirmModal(false)}
-        submitText={"OK"}
-      >
-        Do you want to {state.state} this event?
-      </CustomModal>
     </div>
   );
 }
-export default Calendar;
+export default Calendar; 

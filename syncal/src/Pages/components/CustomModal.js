@@ -39,7 +39,7 @@ export default function CustomModal({
           </Button>
         )}
         {onSubmit && (
-          <Button color="primary" id="gobackbutton" onClick={onSubmit}>
+          <Button color="primary" id="dropdown-basic" onClick={onSubmit}>
             {submitText || "Submit"}
           </Button>
         )}

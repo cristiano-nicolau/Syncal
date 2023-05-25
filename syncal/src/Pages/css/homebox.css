@@ -222,6 +222,8 @@ video {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    color: #fff;
+    background-color: #28a745;
 }
 
 #dropdown-basic:hover {

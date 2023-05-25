@@ -359,24 +359,6 @@ function Calendar() {
             </DateRangePicker>
           </FormGroup>
         </CustomModal>
-
-        <CustomModal
-          title={state.state === "resize" ? "Resize Event" : "Drop Event"}
-          isOpen={confirmModal}
-          toggle={() => {
-            state.checkInfo.revert();
-            setConfirmModal(false);
-          }}
-          onCancel={() => {
-            state.checkInfo.revert();
-            setConfirmModal(false);
-          }}
-          cancelText="Cancel"
-          onSubmit={() => setConfirmModal(false)}
-          submitText={"OK"}
-        >
-          Do you want to {state.state} this event?
-        </CustomModal>
       </div>
     </>
   );
