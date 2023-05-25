@@ -278,7 +278,7 @@ function Calendar() {
                   id: nanoid(),
                   title: "", 
                   start: "2023-06-03T08:00:00",
-                  end: "2023-06-03T13:00:00" 
+                  end: "2023-06-03T19:00:00" 
                 },                { 
                   id: nanoid(),
                   title: "", 
