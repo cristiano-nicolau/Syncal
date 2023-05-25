@@ -328,7 +328,7 @@ function Homebox() {
                             <form className="sharing-form">
                                 <span style={{ margin: '5rem 0 0 0', display: 'block' }} id="spanssettings">
                                     <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
-                                    <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
+                                    <label className="toggle-theme" htmlFor='checkbox' id="labelsettings1">
                                         <ReactSwitch
                                             checked={checked1}
                                             onChange={handleChange1}
@@ -337,7 +337,7 @@ function Homebox() {
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }} >
                                     <p className="toggle-theme-text" id="psettings">Do you want to enable reminders for synchronized events on all calendars? </p>
-                                    <label className="toggle-settings" htmlFor='checkbox' id="labelsettings">
+                                    <label className="toggle-settings" htmlFor='checkbox' id="labelsettings2">
                                         <ReactSwitch
                                             checked={checked2}
                                             onChange={handleChange2}
@@ -346,7 +346,7 @@ function Homebox() {
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }}>
                                     <p className="toggle-theme-text" id="psettings">Do you want to receive email notifications for synchronization errors or conflicts?  </p>
-                                    <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
+                                    <label className="toggle-theme" htmlFor='checkbox' id="labelsettings3">
                                         <ReactSwitch
                                             checked={checked3}
                                             onChange={handleChange3}
