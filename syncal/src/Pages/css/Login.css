@@ -693,8 +693,9 @@ error{
   text-align: center;
   margin-top: 3rem;
   font-size: 4rem;
-  letter-spacing: -1.5px;
+  letter-spacing: 0.1rem;
   font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
