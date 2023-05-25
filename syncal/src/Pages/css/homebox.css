@@ -114,13 +114,10 @@ div.nav-item.dropdown {
 }
 
 #psettings {
-    margin-left: 20%;
+    margin-left: 10%;
+    width: 70%;
 }
 
-#labelsettings {
-    margin-left: 4rem;
-
-}
 
 #savesettingsbutton {
     border-radius: 1rem;

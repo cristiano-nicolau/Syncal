@@ -115,7 +115,7 @@ function Navegationbar(props) {
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }} >
-                                    <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
+                                    <p className="toggle-theme-text" id="psettings">Do you want to enable reminders for synchronized events on all calendars? </p>
                                     <label className="toggle-settings" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
                                             checked={checked2}
@@ -124,7 +124,7 @@ function Navegationbar(props) {
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }}>
-                                    <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
+                                    <p className="toggle-theme-text" id="psettings">Do you want to receive email notifications for synchronization errors or conflicts? </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
                                             checked={checked3}

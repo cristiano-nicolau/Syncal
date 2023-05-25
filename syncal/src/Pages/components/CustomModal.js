@@ -19,27 +19,27 @@ export default function CustomModal({
       <ModalBody>{children}</ModalBody>
       <ModalFooter>
         {/* {state.clickInfo && (
-          <Button color="primary" onClick={handleDelete}>
+          <Button color="primary" id="gobackbutton"onClick={handleDelete}>
             Delete
           </Button>
         )}
         {state.clickInfo && (
-          <Button color="secondary" onClick={handleEdit}>
+          <Button color="secondary" id="gobackbutton" onClick={handleEdit}>
             Edit
           </Button>
         )} */}
         {onCancel && (
-          <Button color="secondary" onClick={onCancel}>
+          <Button color="secondary" id="gobackbutton" onClick={onCancel}>
             {cancelText || "Cancel"}
           </Button>
         )}
         {onDelete && (
-          <Button color="primary" onClick={onDelete}>
+          <Button color="primary" id="gobackbutton" onClick={onDelete}>
             {deleteText || "Delete"}
           </Button>
         )}
         {onSubmit && (
-          <Button color="primary" onClick={onSubmit}>
+          <Button color="primary" id="gobackbutton" onClick={onSubmit}>
             {submitText || "Submit"}
           </Button>
         )}
