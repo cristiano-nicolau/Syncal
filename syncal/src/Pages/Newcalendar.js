@@ -8,7 +8,7 @@ function Newcalendar() {
         <div>
             <Navegationbar></Navegationbar>
             <a href="/home">
-                <button type="button" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
+                <button type="button" id="gobackbutton" class="btn btn-outline-secondary backbut">Go back {'<'}-</button>
             </a>
             <div class='formtype'>
                 <h2>Create a new Calendar</h2>

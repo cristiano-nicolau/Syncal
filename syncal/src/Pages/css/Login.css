@@ -158,6 +158,7 @@
   height:4rem ;
   width: 15rem;
   align-items: center;
+  cursor: pointer;
 
 }
 
@@ -188,6 +189,7 @@
   width: 15rem;
   align-items: center;
   margin-top: 1rem;
+  cursor: pointer;
 
 }
 
@@ -469,17 +471,19 @@
   --background-color: white;
   --font-color: #333;
   --link-color: black;
-  --div-color: #e3f4f3;
+  --div-color: rgba(52, 53, 65);
   --form-color: #fff;
   --img-color: #eee;
   --syncal-img: ../images/syncal.png;
-  --button-color: #4bb6b7;
+  --button-color: rgba(52, 53, 65);
   --logregcont-color: white;
   --tags-color: black;
-  --plogin-color:black;
-  --modal--color:#4bb6b7;
+  --plogin-color:white;
+  --modal--color:rgba(52, 53, 65);
   --modaltext-color:white;
   --background-questionbutton:rgba(52, 53, 65);
+  --dark-text: #333;
+
 
 }
 
@@ -499,6 +503,7 @@
   --modal--color:white;
   --modaltext-color:black;
   --background-questionbutton:white;
+  --dark-text:white;
 
 }
 
@@ -560,7 +565,7 @@ h {
   font-weight: 500;
   line-height: 1.2rem;
   letter-spacing: 0.5px;
-  color:var(--plogin-color);
+  color:var(--dark-text);
 }
 
 
