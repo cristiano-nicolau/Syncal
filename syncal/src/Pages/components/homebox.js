@@ -132,11 +132,11 @@ function Homebox() {
                         </Dropdown.Menu>
                     </Dropdown>
                     <a href="/calendar">
-                        <button href="/calendar" type="button"  id="buttonhomebox" class="btn btn-outline-secondary">My schedules</button>
+                        <button href="/calendar"   id="buttonhomebox" class="btn btn-outline-secondary">My schedules</button>
                     </a>
                     <button onClick={openModal} id="buttonhomebox" class="btn btn-outline-secondary">Sharing Options</button>
                     <a href="/chat">
-                        <button type="button"  id="buttonhomebox"href='/chat' class="btn btn-outline-secondary">Group chat</button>
+                        <button   id="buttonhomebox" class="btn btn-outline-secondary">Group chat</button>
                     </a>
                 </div>
                 <h2>
@@ -149,13 +149,13 @@ function Homebox() {
 
                         <Modal show={selectModal === 1} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
-                            <Modal.Header>
-                                <Modal.Title>Aula de Base de Dados</Modal.Title>
+                            centered style={{ color:'white',borderRadius:'5rem',}}>
+                            <Modal.Header style={{alignItems:'center'}}>
+                                <Modal.Title style={{color:'black',textAlign:'center'}}>Aula de Base de Dados</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Continuação do projeto. Continuar a desenvolver a interface gráfica. Importatnte- Duvida sobre Visual Basics perguntar ao stor</Modal.Body>
+                            <Modal.Body style={{color:'black'}}>Continuação do projeto. Continuar a desenvolver a interface gráfica. Importatnte- Duvida sobre Visual Basics perguntar ao stor</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button  id="gobackbutton"variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -167,13 +167,13 @@ function Homebox() {
 
                         <Modal show={selectModal === 2} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
+                            centered style={{ color:'white',borderRadius:'5rem',}}>
                             <Modal.Header>
-                                <Modal.Title>Aula de Compiladores</Modal.Title>
+                                <Modal.Title style={{color:'black',textAlign:'center'}}>Aula de Compiladores</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Continuar projeto. Dividir tarefas e marcar reuniao para quando for possivel.</Modal.Body>
+                            <Modal.Body style={{color:'black'}}>Continuar projeto. Dividir tarefas e marcar reuniao para quando for possivel.</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -185,13 +185,13 @@ function Homebox() {
 
                         <Modal show={selectModal === 3} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
+                            centered style={{ color:'white',borderRadius:'5rem',}} >
                             <Modal.Header>
-                                <Modal.Title>Aula de IHC</Modal.Title>
+                                <Modal.Title style={{color:'black',textAlign:'center'}} >Aula de IHC</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Apresentação do Projeto Final. </Modal.Body>
+                            <Modal.Body style={{color:'black'}} >Apresentação do Projeto Final. </Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -203,13 +203,13 @@ function Homebox() {
 
                         <Modal show={selectModal === 4} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
+                            centered style={{ color:'white',borderRadius:'5rem',}}>
                             <Modal.Header>
-                                <Modal.Title>Aula de Compiladores</Modal.Title>
+                                <Modal.Title style={{color:'black',textAlign:'center'}} >Aula de Compiladores</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body> Aula terica, resoluçao do teste modelo, tirar duvida no exercicio 3b. </Modal.Body>
+                            <Modal.Body style={{color:'black'}}  > Aula terica, resoluçao do teste modelo, tirar duvida no exercicio 3b. </Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button  id="gobackbutton" variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -221,13 +221,13 @@ function Homebox() {
 
                         <Modal show={selectModal === 6} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
+                            centered style={{ color:'white',borderRadius:'5rem',}}>
                             <Modal.Header>
-                                <Modal.Title>Treino de Futebol</Modal.Title>
+                                <Modal.Title style={{color:'black',textAlign:'center'}}>Treino de Futebol</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Treino  no campo das Monçoes. Força Torre crl</Modal.Body>
+                            <Modal.Body style={{color:'black'}}>Treino  no campo das Monçoes. Força Torre crl</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -246,15 +246,15 @@ function Homebox() {
 
                         <Modal show={selectModal === 10} onHide={handleClose} size="lg"
                             aria-labelledby="contained-modal-title-vcenter"
-                            centered>
+                            centered style={{ color:'white',borderRadius:'5rem',}} >
                             <Modal.Header>
-                                <Modal.Title>
+                                <Modal.Title  style={{color:'black',textAlign:'center'}}>
                                     Consulta
                                 </Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Consulta Hospital da Luz</Modal.Body>
+                            <Modal.Body style={{color:'black'}}>Consulta Hospital da Luz</Modal.Body>
                             <Modal.Footer>
-                                <Button variant="secondary" onClick={handleClose}>
+                                <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                     Close
                                 </Button>
                             </Modal.Footer>
@@ -265,13 +265,13 @@ function Homebox() {
 
                             <Modal show={selectModal === 7} onHide={handleClose} size="lg"
                                 aria-labelledby="contained-modal-title-vcenter"
-                                centered>
+                                centered style={{ color:'white',borderRadius:'5rem',}}>
                                 <Modal.Header>
-                                    <Modal.Title>Ferias com a malta</Modal.Title>
+                                    <Modal.Title style={{color:'black',textAlign:'center'}}>Ferias com a malta</Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>Ferias em espanha. Nao esquecer de pagar a casa ao Paulo. Pedir guito aos pais que a vida nao tá life.</Modal.Body>
+                                <Modal.Body style={{color:'black'}} >Ferias em espanha. Nao esquecer de pagar a casa ao Paulo. Pedir guito aos pais que a vida nao tá life.</Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
+                                    <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
                                 </Modal.Footer>
@@ -284,13 +284,13 @@ function Homebox() {
 
                             <Modal show={selectModal === 8} onHide={handleClose} size="lg"
                                 aria-labelledby="contained-modal-title-vcenter"
-                                centered>
+                                centered style={{ color:'white',borderRadius:'5rem',}}>
                                 <Modal.Header>
-                                    <Modal.Title>Reuniao para estagio</Modal.Title>
+                                    <Modal.Title style={{color:'black',textAlign:'center'}}>Reuniao para estagio</Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>Fé em deus que a vida nao tá life.</Modal.Body>
+                                <Modal.Body style={{color:'black'}} >Fé em deus que a vida nao tá life.</Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
+                                    <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
                                 </Modal.Footer>
@@ -302,15 +302,15 @@ function Homebox() {
 
                             <Modal show={selectModal === 9} onHide={handleClose} size="lg"
                                 aria-labelledby="contained-modal-title-vcenter"
-                                centered>
+                                centered style={{ color:'white',borderRadius:'5rem',}}>
                                 <Modal.Header>
-                                    <Modal.Title>
+                                    <Modal.Title style={{color:'black',textAlign:'center'}} >
                                         Festa de Anos do Pedro
                                     </Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>Bubedeira garantida. Da-lhe Da-lhe</Modal.Body>
+                                <Modal.Body style={{color:'black'}} >Bubedeira garantida. Da-lhe Da-lhe</Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
+                                    <Button id="gobackbutton" variant="secondary" onClick={handleClose}>
                                         Close
                                     </Button>
                                 </Modal.Footer>
@@ -336,7 +336,7 @@ function Homebox() {
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }} >
-                                    <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
+                                    <p className="toggle-theme-text" id="psettings">Do you want to enable reminders for synchronized events on all calendars? </p>
                                     <label className="toggle-settings" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
                                             checked={checked2}
@@ -345,7 +345,7 @@ function Homebox() {
                                     </label>
                                 </span>
                                 <span style={{ margin: '2rem 0 0 0', display: 'block' }}>
-                                    <p className="toggle-theme-text" id="psettings">Do you want to share your calendar events with other people? </p>
+                                    <p className="toggle-theme-text" id="psettings">Do you want to receive email notifications for synchronization errors or conflicts?  </p>
                                     <label className="toggle-theme" htmlFor='checkbox' id="labelsettings">
                                         <ReactSwitch
                                             checked={checked3}

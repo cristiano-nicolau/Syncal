@@ -158,11 +158,12 @@ function Calendar() {
           <Row>
             <Col md={12}>
               <Button
-                style={{ float: "right" }}
+                id="gobackbutton"
+                style={{ float: "right",height:'3rem' }}
                 color="secondary"
                 onClick={() => setModal(true)}
               >
-                Add schedule
+                Add Event
               </Button>
               <FullCalendar
                 ref={calendarRef}
